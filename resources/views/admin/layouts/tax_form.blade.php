@@ -6,19 +6,19 @@
 <form action="{{route('tax.store')}}"method='post'>
   @csrf
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">TIN Number</label>
+    <label for="exampleInputEmail1" class="form-label">Enter Your TIN Number</label>
     <input name="tin_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">NID Number</label>
+    <label for="exampleInputEmail1" class="form-label">Enter Your NID Number</label>
     <input name="nid_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <label for="exampleInputEmail1" class="form-label">Enter Your Name</label>
     <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+    <label for="exampleInputEmail1" class="form-label">Enter Your Phone Number</label>
     <input name="phone_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
    <div class="mb-3">
@@ -26,11 +26,11 @@
     <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Tax Amount</label>
+    <label for="exampleInputEmail1" class="form-label">Enter Your Tax Amount</label>
     <input name="tax_amount" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Status</label>
+    <label for="exampleInputEmail1" class="form-label">Enter Your Status</label>
     <input name="status"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    </div>
   

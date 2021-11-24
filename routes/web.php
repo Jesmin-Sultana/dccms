@@ -5,6 +5,7 @@ use App\Http\controllers\AdminController;
 use App\Http\controllers\Backend\ProblemnameController;
 use App\Http\controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\TaxController;
+use App\Http\Controllers\Backend\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,14 +23,26 @@ use App\Http\Controllers\Backend\TaxController;
 // });
 Route::get('/admin',[AdminController::class,'project']);
 
-Route::get('/admin/problem_name',[ProblemnameController::class,'problemname'])->name('admin.problem_name');
+
 Route::get('/admin/Dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 
-Route::post('/problemname/store',[ProblemnameController::class,'store'])->name('problemname.store');
+
 Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.adminpart');
 
+// tax
 Route::get('/admin/taxs',[TaxController::class,'tax_list'])->name('admin.tax');
 Route::get('/admin/taxs/form',[TaxController::class,'taxform'])->name('admin.tax.form');
 Route::post('/taxs/store',[TaxController::class,'store'])->name('tax.store');
+
+// employee
+Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
+Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
+Route::post('/employees/add',[EmployeeController::class,'add'])->name('employee.add');
+
+
+
+
+
+
 
 

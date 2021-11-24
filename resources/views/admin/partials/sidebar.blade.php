@@ -16,9 +16,9 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 User
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="{{route('admin.employee')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
-                                Staff
+                                Employee
                             </a>
                             <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
@@ -26,7 +26,7 @@
                             </a>
 
                             
-                            <a class="nav-link" href="{{route('admin.problem_name')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 City Corporation Problems
                             </a>

@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\AdminController;
-use App\Http\controllers\Backend\ProblemnameController;
 use App\Http\controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\TaxController;
 use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Backend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +38,11 @@ Route::post('/taxs/store',[TaxController::class,'store'])->name('tax.store');
 Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
 Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
 Route::post('/employees/add',[EmployeeController::class,'add'])->name('employee.add');
+
+// user
+Route::get('/admin/user/list',[UserController::class,'userlist'])->name('admin.user');
+Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
+Route::post('/users/store',[UserController::class,'store'])->name('usertable.store');
 
 
 

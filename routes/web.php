@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\TaxController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProblemController;
+use App\Http\Controllers\Backend\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +51,9 @@ Route::get('/admin/problem/list',[ProblemController::class,'problemlist'])->name
 Route::get('/admin/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
 Route::post('/problems/store',[ProblemController::class,'store'])->name('problem.store');
 
-
+// report
+Route::get('/admin/report/list',[ReportController::class,'reportlist'])->name('admin.report.list');
+Route::get('/admin/report/form',[ReportController::class,'reportform'])->name('report.form');
 
 
 

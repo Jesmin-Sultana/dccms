@@ -6,6 +6,7 @@ use App\Http\controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\TaxController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\ProblemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +45,10 @@ Route::get('/admin/user/list',[UserController::class,'userlist'])->name('admin.u
 Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
 Route::post('/users/store',[UserController::class,'store'])->name('usertable.store');
 
-
+// city corporation problems
+Route::get('/admin/problem/list',[ProblemController::class,'problemlist'])->name('admin.problem.list');
+Route::get('/admin/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
+Route::post('/problems/store',[ProblemController::class,'store'])->name('problem.store');
 
 
 

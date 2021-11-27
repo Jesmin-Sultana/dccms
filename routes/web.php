@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProblemController;
 use App\Http\Controllers\Backend\ReportController;
+use App\Http\Controllers\Backend\EtaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,11 @@ Route::post('/problems/store',[ProblemController::class,'store'])->name('problem
 // report
 Route::get('/admin/report/list',[ReportController::class,'reportlist'])->name('admin.report.list');
 Route::get('/admin/report/form',[ReportController::class,'reportform'])->name('report.form');
+
+// feedback of completion task
+Route::get('/admin/etask/list',[EtaskController::class,'etasklist'])->name('admin.etask.list');
+Route::get('/admin/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
+Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
 
 
 

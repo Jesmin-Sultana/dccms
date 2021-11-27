@@ -19,8 +19,9 @@ class CreateEmployeesTable extends Migration
             $table->integer('nid_number');
             $table->string('address');
             $table->integer('phone_number');
-            $table->string('age');
+            $table->integer('age');
             $table->string('gender');
+            $table->string('working_field');
             $table->timestamps();
         });
     }

@@ -8,12 +8,13 @@
     <tr>
       <th scope="col">Employee NID Number</th>
       <th scope="col">Employee Name</th>
-      <th scope="col">User Name</th>
       <th scope="col">User NID</th>
       <th scope="col">User Name</th>
       <th scope="col">Problem Area</th>
       <th scope="col">Work Type</th>
       <th scope="col">Feedback</th>
+      <th scope="col">Image</th>
+
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,7 @@
       <td>{{$data->problem_area}}</td>
       <td>{{$data->work_type}}</td>
       <td>{{$data->feedback}}</td>
+      <td><img src = "{{url('/uploads/'.$data->image)}}" alt="etask image" width="100px"></td>
     </tr>
     @endforeach
   </tbody>

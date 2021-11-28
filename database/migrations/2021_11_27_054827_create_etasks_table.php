@@ -22,6 +22,8 @@ class CreateEtasksTable extends Migration
             $table->string('problem_area');
             $table->string('work_type');
             $table->string('feedback');
+            $table->string('image');
+
 
             $table->timestamps();
         });

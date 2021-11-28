@@ -25,6 +25,8 @@ class EmployeeController extends Controller
             'phone_number'=>$request->phone_number,
             'age'=>$request->age,
             'gender'=>$request->gender,
+            'working_field'=>$request->working_field,
+
         ]);
         return redirect()->back();
     }

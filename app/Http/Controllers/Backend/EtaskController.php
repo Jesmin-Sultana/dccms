@@ -17,7 +17,7 @@ class EtaskController extends Controller
         return view('admin.layouts.etask_form');
     }
     public function add(Request $request){
-
+        // dd($request->all());
         $request->validate([
             'employee_nid'=>'required',
             'employee_name'=>'required',
@@ -28,6 +28,13 @@ class EtaskController extends Controller
             'feedback'=>'required',
 
         ]);
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $filename = (date('Ymdhms')).'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads',$filename);
+        }
+        // dd("ok");
+        
         etask::create([
             'employee_nid'=>$request->employee_nid,
             'employee_name'=>$request->employee_name,
@@ -36,6 +43,8 @@ class EtaskController extends Controller
             'problem_area'=>$request->problem_area,
             'work_type'=>$request->work_type,
             'feedback'=>$request->feedback,
+            'image'=>$filename,
+
 
         ]);
         return redirect()->back();

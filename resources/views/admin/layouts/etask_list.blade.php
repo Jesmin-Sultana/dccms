@@ -1,6 +1,21 @@
 @extends('admin.master')
 
 @section('main')
+
+{{--Message section in blade file--}}
+
+    @if(session('success'))
+        <div class="alert alert-success">
+            {!! session('success') !!}
+        </div>
+    @endif
+
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {!! session('error') !!}
+        </div>
+    @endif
+
 <h1>Employee Feedback</h1>
 <a href="{{route('etask.form')}}" class="btn btn-danger">Submit Employee Feedback</a>
 <table class="table">

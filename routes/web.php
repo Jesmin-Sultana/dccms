@@ -9,6 +9,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProblemController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\EtaskController;
+use App\Http\Controllers\Backend\UserfeedbackController;
+use App\Http\Controllers\Frontend\WebsiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +63,11 @@ Route::get('/admin/etask/list',[EtaskController::class,'etasklist'])->name('admi
 Route::get('/admin/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
 
+// userfeedback
+Route::get('/admin/userfeedback/list',[UserfeedbackController::class,'userfeedbacklist'])->name('admin.user.feedback');
+Route::get('/admin/userfeedback/form',[UserfeedbackController::class,'userfeedbackform'])->name('user.feedback.form');
+Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name('userfeedback.store');
 
-
+// website part
+Route::get('/',[WebsiteController::class,'websitep'])->name('home');
 

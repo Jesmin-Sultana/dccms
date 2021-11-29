@@ -26,6 +26,7 @@ class EtaskController extends Controller
             'problem_area'=>'required',
             'work_type'=>'required',
             'feedback'=>'required',
+            'image'=>'required',
 
         ]);
         if($request->hasFile('image')){
@@ -34,7 +35,10 @@ class EtaskController extends Controller
             $file->storeAs('/uploads',$filename);
         }
         // dd("ok");
+       
         
+        
+
         etask::create([
             'employee_nid'=>$request->employee_nid,
             'employee_name'=>$request->employee_name,
@@ -47,6 +51,8 @@ class EtaskController extends Controller
 
 
         ]);
+        
         return redirect()->back();
     }
+
 }

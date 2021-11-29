@@ -30,7 +30,7 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 City Corporation Problems
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="{{route('admin.user.feedback')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 User Feedback
                             </a>

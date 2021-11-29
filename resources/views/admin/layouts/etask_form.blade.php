@@ -1,5 +1,7 @@
 @extends('admin.master')
 @section('main')
+
+
 <form action="{{route('etask.add')}}"method='post' enctype="multipart/form-data">
     @csrf
   <div class="mb-3">

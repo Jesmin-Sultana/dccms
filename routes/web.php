@@ -10,7 +10,7 @@ use App\Http\Controllers\Backend\ProblemController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\EtaskController;
 use App\Http\Controllers\Backend\UserfeedbackController;
-use App\Http\Controllers\Frontend\WebsiteController;
+use App\Http\Controllers\Frontend\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +23,9 @@ use App\Http\Controllers\Frontend\WebsiteController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('website.pages.home');
+});
 Route::get('/admin',[AdminController::class,'project']);
 
 
@@ -69,5 +69,5 @@ Route::get('/admin/userfeedback/form',[UserfeedbackController::class,'userfeedba
 Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name('userfeedback.store');
 
 // website part
-Route::get('/',[WebsiteController::class,'websitep'])->name('home');
+Route::get('/home',[HomeController::class,'homef'])->name('home');
 

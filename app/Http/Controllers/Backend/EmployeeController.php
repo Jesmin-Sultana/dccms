@@ -28,6 +28,6 @@ class EmployeeController extends Controller
             'working_field'=>$request->working_field,
 
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.employee');
     }
 }

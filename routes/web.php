@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\EtaskController;
 use App\Http\Controllers\Backend\UserfeedbackController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ShowUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,3 +72,5 @@ Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name
 // website part
 Route::get('/home',[HomeController::class,'homef'])->name('home');
 
+
+Route::get('/home',[ShowUserController::class,'websiteUser'])->name('website.user');

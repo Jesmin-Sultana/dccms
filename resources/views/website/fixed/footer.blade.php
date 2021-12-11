@@ -1,6 +1,5 @@
 <div id="tooplate_footer">
 
-     <a href="#"></a>
+    Copyright © 2048 <a href="#">Your Company Name</a>
 
 </div> <!-- end of tooplate_footer -->
-<!--   Free Website Template by t o o p l a t e . c o m   -->

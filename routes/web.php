@@ -25,9 +25,9 @@ use App\Http\Controllers\Frontend\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('website.pages.home');
-});
+// Route::get('/', function () {
+//     return view('website.pages.home');
+// });
 Route::get('/admin',[AdminController::class,'project']);
 
 
@@ -71,12 +71,14 @@ Route::get('/admin/userfeedback/form',[UserfeedbackController::class,'userfeedba
 Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name('userfeedback.store');
 
 // website part
-Route::get('/home',[HomeController::class,'homef'])->name('home');
+Route::get('/',[HomeController::class,'homef'])->name('website.home');
 
 // Login/Registration part
 Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
-
+Route::post('/user/do/registration',[LoginController::class,'doregistration'])->name('user.do.registration');
 Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login');
+Route::post('/user/do/login',[LoginController::class,'dologin'])->name('user.do.login');
+Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
 

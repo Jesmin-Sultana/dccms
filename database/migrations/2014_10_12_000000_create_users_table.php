@@ -25,8 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('city');
             $table->string('country');
             $table->string('address');
-            $table->string('create_password');
-            $table->string('confirm_password');
+            $table->string('password');
+            // $table->string('confirm_password');
             $table->string('role')->default('user');
             $table->rememberToken();
             $table->timestamps();

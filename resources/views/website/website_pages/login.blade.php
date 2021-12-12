@@ -22,28 +22,22 @@
 
 
 <article class="card-body">
-<form>
-    
-	<!-- <div class="form-row">
-		<div class="col form-group">
-			<label>First name </label>   
-		  	<input name="first_name" type="text" class="form-control" placeholder="">
-		</div> form-group end.// -->
-		<!-- <div class="col form-group">
-			<label>Last name</label>
-		  	<input name="last_name" type="text" class="form-control" placeholder=" ">
-		</div> form-group end.// -->
-	<!-- </div> form-row end.// -->
-
+<form action="{{route('user.do.login')}}" method='post'>
+	@csrf
 
 	<div class="form-group">
+		<label>NID Number</label>
+		<input name="nid_number" type="number" class="form-control" placeholder="">
+	</div>
+	<!-- <div class="form-group">
 		<label>Name</label>
 		<input name="name" type="text" class="form-control" placeholder="">
 	</div>
 	<div class="form-group">
 		<label>NID Number</label>
 		<input name="nid_number" type="number" class="form-control" placeholder="">
-	</div> <!-- form-group end.// -->
+	</div>  -->
+	<!-- form-group end.// -->
 
 	<div class="form-group">
 		<label>Email</label>
@@ -55,62 +49,10 @@
 		<input name="phone_number" type="number" class="form-control" placeholder="">
 	</div>
 
-
-
-	<!-- <div class="form-group">
-			<label class="form-check form-check-inline">
-		  <input class="form-check-input" type="radio" name="gender" value="option1">
-		  <span class="form-check-label"> Male </span>
-		</label>
-		<label class="form-check form-check-inline">
-		  <input class="form-check-input" type="radio" name="gender" value="option2">
-		  <span class="form-check-label"> Female</span>
-		</label> -->
-	<!-- </div> form-group end.// -->
-	<!-- <div class="form-row">
-		<div class="form-group col-md-6">
-		  <label>City</label>
-		  <input name="city" type="text" class="form-control">
-		</div> form-group end.// -->
-		<!-- <div class="form-group col-md-6">
-		  <label>Country</label>
-		  <select id="inputState" class="form-control">
-		    <option> Choose...</option>
-
-            <option selected="">Bangladesh</option>
-
-		      <option>Uzbekistan</option>
-		      <option>Russia</option>
-		      <option>United States</option>
-		      <option>India</option>
-		      <option>Afganistan</option>
-		  </select>
-		</div> form-group end.// -->
-	<!-- </div> form-row.// -->
-   
-   
-   
-    <!-- <div class="form-group">
-		<label>Address</label>
-		<input name="address" type="text" class="form-control" placeholder="">
-	</div> -->
-
-
-
-
-	<!-- <div class="form-group">
-		<label>Create password</label>
-	    <input  class="form-control" name="create_password" type="password">
-	</div> form-group end.//   -->
     <div class="form-group">
 		<label>password</label>
 	    <input  class="form-control" name="password" type="password">
 	</div>
-
-
-   
-
-
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block">Log In</button>

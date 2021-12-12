@@ -14,8 +14,13 @@
                 <li><a href="contact.html">Feeedback of Complation</a></li>
                 <li><a href="contact.html">Tax</a></li>
                 <li><a href="contact.html">Report</a></li>
+                @if(auth()->user())
+                <li><a href="{{route('user.logout')}}">Logout</a></li>
+                @else
                 <li><a href="{{route('user.registration')}}">Registration</a></li>
-                <li><a href="contact.html">Login</a></li>
+                <li><a href="{{route('user.login')}}">Login</a></li>
+                @endif
+
 
 
 

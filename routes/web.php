@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\EtaskController;
 use App\Http\Controllers\Backend\UserfeedbackController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ShowUserController;
+use App\Http\Controllers\Frontend\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +72,18 @@ Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name
 
 // website part
 Route::get('/home',[HomeController::class,'homef'])->name('home');
+
+// Login/Registration part
+Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
+
+Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login');
+
+
+
+
+
+
+
 
 
 Route::get('/home',[ShowUserController::class,'websiteUser'])->name('website.user');

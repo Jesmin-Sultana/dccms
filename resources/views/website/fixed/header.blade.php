@@ -14,6 +14,10 @@
                 <li><a href="contact.html">Feeedback of Complation</a></li>
                 <li><a href="contact.html">Tax</a></li>
                 <li><a href="contact.html">Report</a></li>
+                <li><a href="{{route('user.registration')}}">Registration</a></li>
+                <li><a href="contact.html">Login</a></li>
+
+
 
 
 

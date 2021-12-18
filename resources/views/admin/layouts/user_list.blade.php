@@ -2,7 +2,7 @@
 
 @section('main')
 <h1>User List</h1>
-<a href="{{route('user.form')}}" class="btn btn-secondary">Create a User List</a>
+
 
 <table class="table">
   <thead>

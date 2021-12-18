@@ -57,12 +57,12 @@
 
 	 <div class="form-group">
 			<label class="form-check form-check-inline">
-		  <input class="form-check-input" type="radio" name="gender" value="option1">
-		  <span class="form-check-label"> Male </span>
+		  <input class="form-check-input" type="radio" name="gender" value="Male">
+		  <span class="form-check-label" value="Male"> Male </span>
 		</label>
 		<label class="form-check form-check-inline">
-		  <input class="form-check-input" type="radio" name="gender" value="option2">
-		  <span class="form-check-label"> Female</span>
+		  <input class="form-check-input" type="radio" name="gender" value="Female">
+		  <span class="form-check-label" value="Female"> Female</span>
 		</label> 
 	</div> 
 	<!-- form-group end.//  -->

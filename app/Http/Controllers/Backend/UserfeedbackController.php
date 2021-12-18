@@ -35,7 +35,28 @@ class UserfeedbackController extends Controller
 
 
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.user.feedback')->with('success','created successfully.');
     }
+
+    public function userfeedbackDetails($user_nid)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $userfeedback=Userfeedback::where('user_nid',$user_nid)->first();
+    
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.userfeedback_details',compact('userfeedback'));
+    }
+
+    public function userfeedbackdelete($id)
+    {
+
+        $cc = Userfeedback::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','userfeedback Deleted.');
+    }
+
+
 
 }

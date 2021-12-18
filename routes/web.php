@@ -28,47 +28,63 @@ use App\Http\Controllers\Frontend\LoginController;
 // Route::get('/', function () {
 //     return view('website.pages.home');
 // });
-Route::get('/admin',[AdminController::class,'project']);
+
+Route::group(['prefix'=>'admin'],function(){
 
 
-Route::get('/admin/Dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
+Route::get('/',[AdminController::class,'project']);
 
 
-Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.adminpart');
+Route::get('/Dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
+
+
+Route::get('/',[AdminController::class,'adminpart'])->name('admin.adminpart');
 
 // tax
-Route::get('/admin/taxs',[TaxController::class,'tax_list'])->name('admin.tax');
-Route::get('/admin/taxs/form',[TaxController::class,'taxform'])->name('admin.tax.form');
+Route::get('/taxs',[TaxController::class,'tax_list'])->name('admin.tax');
+Route::get('/taxs/form',[TaxController::class,'taxform'])->name('admin.tax.form');
 Route::post('/taxs/store',[TaxController::class,'store'])->name('tax.store');
 
 // employee
-Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
-Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
+Route::get('/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
+Route::get('/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
 Route::post('/employees/add',[EmployeeController::class,'add'])->name('employee.add');
 
 // user
-Route::get('/admin/user/list',[UserController::class,'userlist'])->name('admin.user');
-Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
-Route::post('/users/store',[UserController::class,'store'])->name('usertable.store');
+Route::get('/user/list',[UserController::class,'userlist'])->name('admin.user');
+// Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
+// Route::post('/users/store',[UserController::class,'store'])->name('usertable.store');
 
 // city corporation problems
-Route::get('/admin/problem/list',[ProblemController::class,'problemlist'])->name('admin.problem.list');
-Route::get('/admin/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
+Route::get('/problem/list',[ProblemController::class,'problemlist'])->name('admin.problem.list');
+Route::get('/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
 Route::post('/problems/store',[ProblemController::class,'store'])->name('problem.store');
 
 // report
-Route::get('/admin/report/list',[ReportController::class,'reportlist'])->name('admin.report.list');
-Route::get('/admin/report/form',[ReportController::class,'reportform'])->name('report.form');
+Route::get('/report/list',[ReportController::class,'reportlist'])->name('admin.report.list');
+Route::get('/report/form',[ReportController::class,'reportform'])->name('report.form');
 
 // feedback of completion task
-Route::get('/admin/etask/list',[EtaskController::class,'etasklist'])->name('admin.etask.list');
-Route::get('/admin/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
+Route::get('/etask/list',[EtaskController::class,'etasklist'])->name('admin.etask.list');
+Route::get('/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
 
 // userfeedback
-Route::get('/admin/userfeedback/list',[UserfeedbackController::class,'userfeedbacklist'])->name('admin.user.feedback');
-Route::get('/admin/userfeedback/form',[UserfeedbackController::class,'userfeedbackform'])->name('user.feedback.form');
+Route::get('/userfeedback/list',[UserfeedbackController::class,'userfeedbacklist'])->name('admin.user.feedback');
+Route::get('/userfeedback/form',[UserfeedbackController::class,'userfeedbackform'])->name('user.feedback.form');
 Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name('userfeedback.store');
+Route::get('userfeedback/view/{user_nid}',[UserfeedbackController::class,'userfeedbackDetails'])->name('admin.user.feedback.details');
+Route::get('userfeedback/delete/{id}',[UserfeedbackController::class,'userfeedbackdelete'])->name('admin.user.feedback.delete');
+
+
+
+});
+
+
+
+
+
+
 
 // website part
 Route::get('/',[HomeController::class,'homef'])->name('website.home');

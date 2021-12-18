@@ -6,14 +6,14 @@
         <div id="tooplate_menu">
             <ul>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Admin</a></li>
-                <li><a href="{{route('website.user')}}">User</a></li>
-                <li><a href="contact.html">Employee</a></li>
+                <!-- <li><a href="gallery.html">Admin</a></li> -->
+                <!-- <li><a href="{{route('website.user')}}">User</a></li> -->
+                <!-- <li><a href="contact.html">Employee</a></li> -->
                 <li><a href="contact.html">City Corporation Problem</a></li>
                 <li><a href="contact.html">User Feedback</a></li>
                 <li><a href="contact.html">Feeedback of Complation</a></li>
-                <li><a href="contact.html">Tax</a></li>
-                <li><a href="contact.html">Report</a></li>
+                <!-- <li><a href="contact.html">Tax</a></li> -->
+                <!-- <li><a href="contact.html">Report</a></li> -->
                 @if(auth()->user())
                 <li><a href="{{route('user.logout')}}">Logout</a></li>
                 @else

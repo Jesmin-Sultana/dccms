@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\UserfeedbackController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ShowUserController;
 use App\Http\Controllers\Frontend\LoginController;
+use App\Http\Controllers\Backend\AdminloginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,20 @@ use App\Http\Controllers\Frontend\LoginController;
 // });
 
 Route::group(['prefix'=>'admin'],function(){
+
+// Admin Login
+Route::get('/login',[AdminloginController::class,'login'])->name('admin.login');
+Route::post('/login',[AdminloginController::class,'dologin'])->name('admin.do.login');
+
+
+Route::group(['middleware'=>'auth'],function (){
+    Route::get('/', function () {
+        return view('admin.layouts.dashboard');
+    })->name('admin.dashboard');
+
+Route::get('/logout',[AdminloginController::class,'logout'])->name('admin.logout');
+
+
 
 
 Route::get('/',[AdminController::class,'project']);
@@ -78,6 +93,13 @@ Route::get('userfeedback/delete/{id}',[UserfeedbackController::class,'userfeedba
 
 
 
+
+
+
+
+
+
+});
 });
 
 

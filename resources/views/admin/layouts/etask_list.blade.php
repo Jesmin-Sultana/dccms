@@ -29,6 +29,8 @@
       <th scope="col">Work Type</th>
       <th scope="col">Feedback</th>
       <th scope="col">Image</th>
+      <th scope="col">Action</th>
+
 
     </tr>
   </thead>
@@ -43,6 +45,13 @@
       <td>{{$data->work_type}}</td>
       <td>{{$data->feedback}}</td>
       <td><img src = "{{url('/uploads/'.$data->image)}}" alt="etask image" width="100px"></td>
+      <td>
+      <a class="btn btn-danger" href="{{route('admin.Employee.feedback.details',$data->employee_nid)}}">View</a>
+
+      </td>
+
+
+    
     </tr>
     @endforeach
   </tbody>

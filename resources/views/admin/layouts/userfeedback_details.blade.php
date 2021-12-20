@@ -13,8 +13,6 @@
 <p>User Feedback : {{$userfeedback->feedback}}</p>
 
 
-    <lable>User Name:</lable>
-    <input type="text" class="form-control" value="{{$userfeedback->name}}">
-    <input type="file" class="form-control">
+   
 
 @endsection

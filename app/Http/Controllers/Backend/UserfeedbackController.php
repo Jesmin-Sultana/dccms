@@ -56,7 +56,8 @@ class UserfeedbackController extends Controller
         $cc->delete();
        return redirect()->back()->with('success','userfeedback Deleted.');
     }
-
-
-
 }
+
+
+
+

@@ -22,9 +22,31 @@ class ProblemController extends Controller
             'name'=>$request->name,
             'phone_number'=>$request->phone_number,
             'area'=>$request->area,
+            'problem_type'=>$request->problem_type,
             'description_problem'=>$request->description_problem,
             'date'=>$request->date,
         ]);
         return redirect()->back();
     }
+
+    public function probleminfoDetails($nid_number)
+    {
+
+      $problem=Problem::where('nid_number',$nid_number)->first();
+    
+        return view('admin.layouts.problem_details',compact('problem'));
+    }
+    public function probleminfoDelete($id)
+    {
+
+        $cc = Problem::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','objection info Deleted.');
+    }
+
+    // public function probleminfoDelete($id)
+    // {
+    //     Problem::find($id)->delete();
+    //    return redirect()->back()->with('success','objection info Deleted.');
+    // }
 }

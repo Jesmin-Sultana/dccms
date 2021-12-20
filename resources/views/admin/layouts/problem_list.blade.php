@@ -11,8 +11,11 @@
       <th scope="col">Name</th>
       <th scope="col">Phone Number</th>
       <th scope="col">Area</th>
+      <th scope="col">Problem Type</th>
       <th scope="col">Description of Problem</th>
       <th scope="col">Date</th> 
+      <th scope="col">Action</th> 
+
     </tr>
   </thead>
   <tbody>
@@ -22,8 +25,19 @@
       <td>{{$data->name}}</td>
       <td>{{$data->phone_number}}</td>
       <td>{{$data->area}}</td>
+      <td>{{$data->problem_type}}</td>
       <td>{{$data->description_problem}}</td>
       <td>{{$data->date}}</td>
+
+      <td>
+      <a class="btn btn-dark" href="{{route('admin.problem.info.details',$data->nid_number)}}">View</a>
+
+      </td>
+      <td>
+      <a class="btn btn-dark" href="{{route('admin.problem.info.delete',$data->id)}}">Delete</a>
+
+
+      </td>
     </tr>
     @endforeach
   </tbody>

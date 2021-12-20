@@ -20,7 +20,10 @@
     <input name="area" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div> 
   <div class="mb-3">
-    <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    <label for="exampleInputEmail1" class="form-label">Problem Type</label>
+    <input name="problem_type" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div> 
+  <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Describe Your Problem</label>
     <br>
     <textarea id="description_problem" name="description_problem" rows="4" cols="100">  </textarea>
@@ -31,10 +34,7 @@
 </div>
 
 
-  <!-- <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> -->
+  
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 

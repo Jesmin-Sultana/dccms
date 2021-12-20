@@ -14,6 +14,9 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ShowUserController;
 use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Backend\AdminloginController;
+use App\Http\Controllers\Backend\AssignemployeeController;
+use App\Http\Controllers\Frontend\ProblemshowController;
+use App\Http\Controllers\Backend\TypeproblemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,9 +74,15 @@ Route::get('/user/list',[UserController::class,'userlist'])->name('admin.user');
 // Route::post('/users/store',[UserController::class,'store'])->name('usertable.store');
 
 // city corporation problems
-Route::get('/problem/list',[ProblemController::class,'problemlist'])->name('admin.problem.list');
+Route::get('/problem/list',[ProblemController::class,'problemlist'])->name('admin.problems.list');
 Route::get('/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
 Route::post('/problems/store',[ProblemController::class,'store'])->name('problem.store');
+Route::get('probleminfo/view/{nid_number}',[ProblemController::class,'probleminfoDetails'])->name('admin.problem.info.details');
+Route::get('probleminfo/delete/{id}',[ProblemController::class,'probleminfoDelete'])->name('admin.problem.info.delete');
+
+
+
+
 
 // report
 Route::get('/report/list',[ReportController::class,'reportlist'])->name('admin.report.list');
@@ -84,6 +93,7 @@ Route::get('/etask/list',[EtaskController::class,'etasklist'])->name('admin.etas
 Route::get('/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
 
+
 // userfeedback
 Route::get('/userfeedback/list',[UserfeedbackController::class,'userfeedbacklist'])->name('admin.user.feedback');
 Route::get('/userfeedback/form',[UserfeedbackController::class,'userfeedbackform'])->name('user.feedback.form');
@@ -91,6 +101,11 @@ Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name
 Route::get('userfeedback/view/{user_nid}',[UserfeedbackController::class,'userfeedbackDetails'])->name('admin.user.feedback.details');
 Route::get('userfeedback/delete/{id}',[UserfeedbackController::class,'userfeedbackdelete'])->name('admin.user.feedback.delete');
 
+// Assign Employee
+Route::get('/assign/employee/list',[AssignemployeeController::class,'assignform'])->name('admin.assign.employee');
+
+// Problem Type
+Route::get('/problem/type/list',[TypeproblemController::class,'typeform'])->name('admin.problem.type');
 
 
 
@@ -127,3 +142,15 @@ Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout'
 
 
 Route::get('/home',[ShowUserController::class,'websiteUser'])->name('website.user');
+
+
+
+// Website City Corporation Problem
+Route::get('/user/website/problem',[ProblemshowController::class,'websiteproblem'])->name('website.show.problem');
+Route::post('/user/website/problem/show',[ProblemshowController::class,'doshowproblem'])->name('admin.problem.list');
+
+
+
+
+
+

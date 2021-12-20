@@ -20,13 +20,17 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 Employee
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="{{route('admin.assign.employee')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 Assign_Employee
                             </a>
+                            <a class="nav-link" href="{{route('admin.problem.type')}}">
+                                <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
+                                Problem Type
+                            </a>
 
                             
-                            <a class="nav-link" href="{{route('admin.problem.list')}}">
+                            <a class="nav-link" href="{{route('admin.problems.list')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 City Corporation Problems
                             </a>

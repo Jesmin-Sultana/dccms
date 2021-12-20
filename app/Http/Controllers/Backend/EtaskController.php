@@ -55,4 +55,7 @@ class EtaskController extends Controller
         return redirect()->route('admin.etask.list');
     }
 
+    
+
+
 }

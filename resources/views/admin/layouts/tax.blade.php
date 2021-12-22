@@ -16,6 +16,8 @@
       <th scope="col">Gender</th>
       <th scope="col">Tax Amount</th>
       <th scope="col">Status</th>
+      <th scope="col">Action</th>
+
     </tr>
   </thead>
   <tbody>
@@ -28,6 +30,14 @@
       <td>{{$data->gender}}</td>
       <td>{{$data->tax_amount}}</td>
       <td>{{$data->status}}</td>
+      <td>
+      <a class="btn btn-info" href="{{route('admin.tax.details',$data->tin_number)}}">View</a>
+
+      </td>
+      <td>
+      <a class="btn btn-success" href="{{route('admin.tax.delete',$data->id)}}">Delete</a>
+
+      </td>
     </tr>
     @endforeach
     

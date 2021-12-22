@@ -62,11 +62,17 @@ Route::get('/',[AdminController::class,'adminpart'])->name('admin.adminpart');
 Route::get('/taxs',[TaxController::class,'tax_list'])->name('admin.tax');
 Route::get('/taxs/form',[TaxController::class,'taxform'])->name('admin.tax.form');
 Route::post('/taxs/store',[TaxController::class,'store'])->name('tax.store');
+Route::get('tax/view/{tin_number}',[TaxController::class,'taxDetails'])->name('admin.tax.details');
+Route::get('tax/delete/{id}',[TaxController::class,'taxdelete'])->name('admin.tax.delete');
+
 
 // employee
 Route::get('/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
 Route::get('/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
 Route::post('/employees/add',[EmployeeController::class,'add'])->name('employee.add');
+Route::get('employee/view/{nid_number}',[EmployeeController::class,'employeeDetails'])->name('admin.employee.details');
+Route::get('employees/delete/{id}',[EmployeeController::class,'employeedelete'])->name('admin.employee.details.delete');
+
 
 // user
 Route::get('/user/list',[UserController::class,'userlist'])->name('admin.user');
@@ -92,6 +98,9 @@ Route::get('/report/form',[ReportController::class,'reportform'])->name('report.
 Route::get('/etask/list',[EtaskController::class,'etasklist'])->name('admin.etask.list');
 Route::get('/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
+Route::get('employeefeedback/view/{employee_nid}',[EtaskController::class,'etaskDetails'])->name('admin.Employee.feedback.details');
+Route::get('employeefeedback/delete/{id}',[EtaskController::class,'etaskdelete'])->name('admin.employee.feedback.delete');
+
 
 
 // userfeedback

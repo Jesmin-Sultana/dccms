@@ -30,4 +30,20 @@ class EmployeeController extends Controller
         ]);
         return redirect()->route('admin.employee');
     }
+
+    public function employeeDetails($nid_number)
+    {
+
+        $employee=Employee::where('nid_number',$nid_number)->first();
+    
+        return view('admin.layouts.employee_details',compact('employee'));
+    }
+
+    public function employeedelete($id)
+    {
+
+        $cc = Employee::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','employee details Deleted.');
+    }
 }

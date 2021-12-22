@@ -2,7 +2,7 @@
 
 @section('main')
 <h1>Objection Site</h1>
-<a href="{{route('problem.form')}}" class="btn btn-dark">Problem Info</a>
+<a href="{{route('problem.form')}}"></a>
 
 <table class="table">
   <thead>
@@ -34,7 +34,7 @@
 
       </td>
       <td>
-      <a class="btn btn-dark" href="{{route('admin.problem.info.delete',$data->id)}}">Delete</a>
+      <a class="btn btn-success" href="{{route('admin.problem.info.delete',$data->id)}}">Delete</a>
 
 
       </td>

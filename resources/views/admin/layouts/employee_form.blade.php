@@ -25,11 +25,27 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Gender</label>
-    <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <!-- <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    <select name="gender" id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Working Field</label>
-    <input name="working_field" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <!-- <input name="working_field" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    <select name="working_field" id="working_field">
+    <option value="electricity">Electricity</option>
+    <option value="water">Water</option>
+    <option value="gas">Gas</option>
+    <option value="street">Street</option>
+    <option value="mosquito">Mosquito</option>
+    <option value="waterlogging">Waterlogging</option>
+    <option value="garbage">Garbage</option>
+    <option value="sewage">Sewage</option>
+
+  </select>
   </div>
   
   <!-- <div class="mb-3 form-check">

@@ -35,23 +35,16 @@
     <option value="street">Waterlogging</option>
     <option value="street">Garbage</option>
     <option value="street">Sewage</option>
-
-
-
-
   </select>
-
-    <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Employee Feedback</label>
     <select name="feedback" id="feedback">
-    <option value="street">Done</option>
+    <option value="done">Done</option>
     <option value="good">Good</option>
     <option value="bad">Bad</option>
     <option value="nothing">Nothing</option>
   </select>
-    <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Image</label>

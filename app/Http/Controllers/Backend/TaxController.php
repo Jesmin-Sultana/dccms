@@ -27,6 +27,22 @@ class TaxController extends Controller
             'tax_amount'=>$request->tax_amount,
             'status'=>$request->status,
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.tax');
+    }
+
+    public function taxDetails($tin_number)
+    {
+
+        $tax=Tax::where('tin_number',$tin_number)->first();
+    
+        return view('admin.layouts.tax_details',compact('tax'));
+    }
+
+    public function taxdelete($id)
+    {
+
+        $cc = Tax::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','tax Deleted.');
     }
 }

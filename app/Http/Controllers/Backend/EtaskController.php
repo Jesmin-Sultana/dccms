@@ -55,6 +55,21 @@ class EtaskController extends Controller
         return redirect()->route('admin.etask.list');
     }
 
+    public function etaskDetails($employee_nid)
+    {
+
+        $etask=Etask::where('employee_nid',$employee_nid)->first();
+    
+        return view('admin.layouts.etask_details',compact('etask'));
+    }
+
+    public function etaskdelete($id)
+    {
+
+        $cc = Etask::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','employee of feedback Deleted.');
+    }
     
 
 

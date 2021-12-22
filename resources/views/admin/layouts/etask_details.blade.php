@@ -1,4 +1,4 @@
-<!-- @extends('admin.master')
+@extends('admin.master')
 
 
 @section('main')
@@ -7,16 +7,16 @@
     <p>
     <img src = "{{url('/uploads/'.$etask->image)}}" alt="etask image" width="100px">
     </p>
-<p>Employee NID Number: {{$etask->user_name}}</p>
-<p>Employee Name: {{$etask->user_nid}}</h4></p>
-<p>User NID: {{$etask->problem_type}}</p>
-<p>User Name: {{$etask->feedback}}</p>
-<p>Problem Area: {{$etask->feedback}}</p>
-<p>User Name: {{$etask->feedback}}</p>
-<p>User Name: {{$etask->feedback}}</p>
+<p>Employee NID Number: {{$etask->employee_nid}}</p>
+<p>Employee Name: {{$etask->employee_name}}</h4></p>
+<p>User NID: {{$etask->user_nid}}</p>
+<p>User Name: {{$etask->user_name}}</p>
+<p>Problem Area: {{$etask->problem_area}}</p>
+<p>Work Type: {{$etask->work_type}}</p>
+<p>Feedback: {{$etask->feedback}}</p>
 
 
 
     
 
-@endsection -->
+@endsection

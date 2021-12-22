@@ -49,6 +49,10 @@
       <a class="btn btn-danger" href="{{route('admin.Employee.feedback.details',$data->employee_nid)}}">View</a>
 
       </td>
+      <td>
+      <a class="btn btn-warning" href="{{route('admin.employee.feedback.delete',$data->id)}}">Delete</a>
+
+      </td>
 
 
     

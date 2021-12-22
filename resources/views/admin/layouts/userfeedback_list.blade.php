@@ -30,7 +30,7 @@
       <td>{{$data->feedback}}</td>
       <td><img src = "{{url('/uploads/'.$data->image)}}" alt="userfeedback image" width="100px"></td>
       <td>
-        <a class="btn btn-success" href="{{route('admin.user.feedback.details',$data->user_nid)}}">View</a>
+        <a class="btn btn-info" href="{{route('admin.user.feedback.details',$data->user_nid)}}">View</a>
       </td>
       <td>
       <a class="btn btn-success" href="{{route('admin.user.feedback.delete',$data->id)}}">Delete</a>

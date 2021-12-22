@@ -16,6 +16,8 @@
       <th scope="col">Age</th>
       <th scope="col">Gender</th>
       <th scope="col">Working Field</th>
+      <th scope="col">Action</th>
+
 
     </tr>
   </thead>
@@ -28,6 +30,16 @@
       <td>{{$data->phone_number}}</td>
       <td>{{$data->age}}</td>
       <td>{{$data->gender}}</td>
+      <td>{{$data->working_field}}</td>
+
+      <td>
+      <a class="btn btn-success" href="{{route('admin.employee.details',$data->nid_number)}}">View</a>
+
+      </td>
+      <td>
+      <a class="btn btn-warning" href="{{route('admin.employee.details.delete',$data->id)}}">Delete</a>
+
+      </td>
     </tr>
     @endforeach
     

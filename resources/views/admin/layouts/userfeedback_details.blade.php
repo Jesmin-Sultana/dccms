@@ -8,7 +8,7 @@
     <img src = " {{url('/uploads/'.$userfeedback->image)}}" alt="userfeedback image" width="100px">
     </p>
 <p>User Name: {{$userfeedback->user_name}}</p>
-<p>User NID: <h4><span style="color: orange">BDT {{$userfeedback->user_nid}}</span></h4></p>
+<p>User NID:  {{$userfeedback->user_nid}}</p>
 <p>User Problem Type: {{$userfeedback->problem_type}}</p>
 <p>User Feedback : {{$userfeedback->feedback}}</p>
 

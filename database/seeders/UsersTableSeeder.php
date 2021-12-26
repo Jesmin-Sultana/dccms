@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -14,17 +15,6 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create(
-
-
-            // [
-            //     'nid_number'=>'12345',
-            //     'email'=>'admin@gmail.com',
-            //     'phone_number'=>'0191567',
-            //     'password'=>bcrypt('hira'),
-
-
-            // ]
-            // );
             [
                 'first_name'=>'admin',
                 'last_name'=>'panel',

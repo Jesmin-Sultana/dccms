@@ -63,6 +63,61 @@ class EtaskController extends Controller
         return view('admin.layouts.etask_details',compact('etask'));
     }
 
+    public function etaskEdit($employee_nid)
+    {
+
+        $etask=Etask::find($employee_nid);
+//        $product=Product::where('user_id',$id)->first();
+
+//        dd($all_categories);
+        return view('admin.layouts.etask_edit',compact('etask'));
+
+    }
+
+
+
+    public function etaskupdate(Request $request,$id)
+    {
+
+        
+        $etask=Etask::find($id);
+
+//        Product::where('column','value')->udpate([
+//            'column'=>'request form field name'
+//        ]);
+
+        $image_name=$etask->image;
+              if($request->hasFile('image')){
+            $file = $request->file('image');
+            $filename = (date('Ymdhms')).'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads',$filename);
+        }
+
+        $etask->update([
+            'employee_nid'=>$request->employee_nid,
+            'employee_name'=>$request->employee_name,
+            'user_nid'=>$request->user_nid,
+            'user_name'=>$request->user_name,
+            'problem_area'=>$request->problem_area,
+            'work_type'=>$request->work_type,
+            'feedback'=>$request->feedback,
+            'image'=>$filename,
+
+
+        ]);
+        return redirect()->route('admin.etask.list')->with('success','Feedback of Complation Task Updated Successfully.');
+
+    }
+
+
+
+
+
+
+
+
+
+
     public function etaskdelete($id)
     {
 
@@ -70,6 +125,8 @@ class EtaskController extends Controller
         $cc->delete();
        return redirect()->back()->with('success','employee of feedback Deleted.');
     }
+
+
     
 
 

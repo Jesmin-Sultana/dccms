@@ -94,11 +94,16 @@ Route::get('probleminfo/delete/{id}',[ProblemController::class,'probleminfoDelet
 Route::get('/report/list',[ReportController::class,'reportlist'])->name('admin.report.list');
 Route::get('/report/form',[ReportController::class,'reportform'])->name('report.form');
 
+
+
+
 // feedback of completion task
 Route::get('/etask/list',[EtaskController::class,'etasklist'])->name('admin.etask.list');
 Route::get('/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
 Route::get('employeefeedback/view/{employee_nid}',[EtaskController::class,'etaskDetails'])->name('admin.Employee.feedback.details');
+Route::get('etask/edit/{employee_nid}',[EtaskController::class,'etaskEdit'])->name('admin.etask.edit');
+Route::put('etask/update/{id}',[EtaskController::class,'etaskupdate'])->name('admin.etask.update');
 Route::get('employeefeedback/delete/{id}',[EtaskController::class,'etaskdelete'])->name('admin.employee.feedback.delete');
 
 

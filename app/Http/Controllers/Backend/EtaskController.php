@@ -8,9 +8,15 @@ use Illuminate\Http\Request;
 
 class EtaskController extends Controller
 {
-    public function etasklist(){
+    public function etasklist(Request $request){
+        $search = $request->query('search');
+        if($search){
+            $etask = Etask::where('user_nid','Like', '%'.$search.'%')
+                ->orWhere('employee_nid','like','%'.$search.'%')->get();
+            return view('admin.layouts.etask_list',compact('etask'));
+        }
+       
         $etask = Etask::all();
-        // dd($etask);
         return view('admin.layouts.etask_list',compact('etask'));
     }
     public function etaskform(){

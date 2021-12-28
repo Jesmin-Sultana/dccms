@@ -3,13 +3,13 @@
 @section('main')
 
 <h1>Employee List</h1>
-<a href="{{route('admin.employee.form')}}" class="btn btn-warning">Employee Info</a>
+<a href="{{route('admin.employee.form')}}" class="btn btn-warning">Add Employee</a>
 
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Name</th>
+      <th scope="col">Employee Name</th>
       <th scope="col">NID Number</th>
       <th scope="col">Address</th>
       <th scope="col">Phone Number</th>
@@ -24,7 +24,7 @@
   <tbody>
       @foreach($employee as $data)
     <tr>
-      <th scope="row">{{$data->name}}</th>
+      <th scope="row">{{$data->employee_name}}</th>
       <td>{{$data->nid_number}}</td>
       <td>{{$data->address}}</td>
       <td>{{$data->phone_number}}</td>

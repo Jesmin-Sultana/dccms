@@ -25,6 +25,6 @@ class ProblemshowController extends Controller
             'description_problem'=>$request->description_problem,
             'date'=>$request->date,
         ]);
-        return redirect()->back()->with('msg','Thank You');
+        return redirect()->back()->with('msg','Thank You For Your Feedback');
     }
 }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>City Corporation Muncipal Problem </title>
+<title>City Corporation Municipal Problem </title>
 <meta name="keywords" content="city blog, theme, free templates, website templates, CSS, HTML" />
 <meta name="description" content="City Blog Theme is a free website template provided by tooplate.com" />
 <link href="{{url('website/css_pirobox/tooplate_style.css')}}" rel="stylesheet" type="text/css" />

@@ -16,6 +16,10 @@
     <input name="problem_type" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Area</label>
+    <input name="area" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Feedback</label>
     <input name="feedback" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>

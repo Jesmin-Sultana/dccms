@@ -3,7 +3,7 @@
 @section('main')
 
 <h1>User Feedback</h1>
-<a href="{{route('user.feedback.form')}}" class="btn btn-success">Submit Your Feedback</a>
+<a href="{{route('user.feedback.form')}}"></a>
 
 <table class="table">
   <thead>

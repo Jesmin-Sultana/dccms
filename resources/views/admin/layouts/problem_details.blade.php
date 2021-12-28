@@ -22,19 +22,20 @@
 <!-- <p>The select element is used to create a drop-down list.</p> -->
 
 <form action="/action_page.php">
-  <label for="problems">Choose a problem:</label>
+  <label for="employee">Choose an employee:</label>
   <select name="problem" id="problem">
-    <option value="volvo">Electricity</option>
-    <option value="saab">Water</option>
-    <option value="opel">Gas</option>
-    <option value="audi">Garbage</option>
+    <option value="hira">Hira</option>
+    <option value="jesmin">Jesmin</option>
+    <option value="jabib">Jabib</option>
+    <option value="mira">Mira</option>
   </select>
   <br><br>
-  <input type="submit" value="Submit">
+  <!-- <input type="submit" value="Submit"> -->
+  <a href="#" class="btn btn-danger">Submit</a>
+
 </form>
 
-<p>Click the "Submit" button and the form-data will be sent to a page on the 
-Assign Employee".</p>
+<p>Click the "Submit" button and the form-data will be sent to a page on the Employee".</p>
 
 </body>
 </html>

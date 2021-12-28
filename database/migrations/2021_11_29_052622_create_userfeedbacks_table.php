@@ -18,6 +18,7 @@ class CreateUserfeedbacksTable extends Migration
             $table->string('user_name');
             $table->integer('user_nid');
             $table->string('problem_type');
+            $table->string('area');
             $table->string('feedback');
             $table->string('image');
 

@@ -19,7 +19,7 @@ class EmployeeController extends Controller
     }
     public function add(Request $request){
         employee::create([
-            'name'=>$request->name,
+            'employee_name'=>$request->name,
             'nid_number'=>$request->nid_number,
             'address'=>$request->address,
             'phone_number'=>$request->phone_number,

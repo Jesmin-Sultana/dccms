@@ -4,8 +4,8 @@
 <form action="{{route('employee.add')}}"method='post'>
     @csrf
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Name</label>
-    <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Employee Name</label>
+    <input name="employee_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your NID Number</label>

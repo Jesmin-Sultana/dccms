@@ -22,6 +22,9 @@ class CreateProblemsTable extends Migration
             $table->string('problem_type');
             $table->text('description_problem');
             $table->date('date');
+            $table->string('employee_name')->nullable();
+
+
             $table->timestamps();
         });
     }

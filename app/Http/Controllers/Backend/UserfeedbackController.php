@@ -17,6 +17,7 @@ class UserfeedbackController extends Controller
         return view('admin.layouts.userfeedback_form');
     }
     public function store(Request $request){
+        // dd($request-> all());
 
         if($request->hasFile('image')){
             $file = $request->file('image');
@@ -27,6 +28,7 @@ class UserfeedbackController extends Controller
             'user_name'=>$request->user_name,
             'user_nid'=>$request->user_nid,
             'problem_type'=>$request->problem_type,
+            'area'=>$request->area,
             'feedback'=>$request->feedback,
             'image'=>$filename,
 

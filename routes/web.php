@@ -11,12 +11,14 @@ use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\EtaskController;
 use App\Http\Controllers\Backend\UserfeedbackController;
 use App\Http\Controllers\Frontend\HomeController;
-use App\Http\Controllers\Frontend\ShowUserController;
 use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Backend\AdminloginController;
 use App\Http\Controllers\Backend\AssignemployeeController;
 use App\Http\Controllers\Frontend\ProblemshowController;
 use App\Http\Controllers\Backend\TypeproblemController;
+use App\Http\Controllers\Frontend\UserprofileController;
+use App\Http\Controllers\Frontend\ShowUserFeedbackController;
+use App\Http\Controllers\Frontend\ShowEtaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -163,8 +165,18 @@ Route::get('/home',[ShowUserController::class,'websiteUser'])->name('website.use
 Route::get('/user/website/problem',[ProblemshowController::class,'websiteproblem'])->name('website.show.problem');
 Route::post('/user/website/problem/show',[ProblemshowController::class,'doshowproblem'])->name('admin.problem.list');
 
+// User Profile
 
+Route::get('/user/profile',[UserprofileController::class,'userprofilew'])->name('website.user.profile');
 
+// Website User Feedback
+
+Route::get('/user/show/feedback',[ShowUserFeedbackController::class,'userfeedbackw'])->name('website.show.user.feedback');
+Route::post('/user/website/feedback',[ShowUserFeedbackController::class,'douserfeedback'])->name('admin.users.feedback');
+
+// Feedback of Employee
+Route::get('/employee/show/feedback',[ShowEtaskController::class,'etaskw'])->name('website.show.employee.feedback');
+Route::post('/employee/website/feedback',[ShowEtaskController::class,'doetaskfeedback'])->name('admin.etasks.list');
 
 
 

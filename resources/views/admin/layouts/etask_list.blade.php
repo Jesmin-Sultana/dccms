@@ -17,7 +17,7 @@
     @endif
 
 <h1>Employee Feedback</h1>
-<a href="{{route('etask.form')}}" class="btn btn-danger">Submit Employee Feedback</a>
+<a href="{{route('etask.form')}}"></a>
 
 <!-- Search -->
 <form action="{{route('admin.etask.list')}}">
@@ -67,7 +67,7 @@
 
       </td>
       <td>
-      <a class="btn btn-danger" href="{{route('admin.etask.edit',$data->id)}}">Edit</a>
+      <a class="btn btn-success" href="{{route('admin.etask.edit',$data->id)}}">Edit</a>
 
       </td>
       <td>

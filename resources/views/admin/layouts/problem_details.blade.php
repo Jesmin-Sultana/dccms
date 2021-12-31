@@ -13,6 +13,8 @@
 <p> Date: {{$problem->date}}</p>
 
 
+
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -43,6 +45,9 @@
 
 
 
-   
-
 @endsection
+
+
+
+
+

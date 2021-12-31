@@ -51,6 +51,54 @@ class UserfeedbackController extends Controller
         return view('admin.layouts.userfeedback_details',compact('userfeedback'));
     }
 
+
+    public function userfeedbackedit($id)
+    {
+
+        $userfeedback=Userfeedback::find($id);
+//        $product=Product::where('user_id',$id)->first();
+
+//        dd($all_categories);
+        return view('admin.layouts.userfeedback_edit',compact('userfeedback'));
+
+    }
+
+
+    public function userfeedbackupdate(Request $request,$id)
+    {
+
+        
+        $userfeedback=Userfeedback::find($id);
+
+//        Product::where('column','value')->udpate([
+//            'column'=>'request form field name'
+//        ]);
+
+        $image_name=$userfeedback->image;
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $filename = (date('Ymdhms')).'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads',$filename);
+        }
+        userfeedback::create([
+            'user_name'=>$request->user_name,
+            'user_nid'=>$request->user_nid,
+            'problem_type'=>$request->problem_type,
+            'area'=>$request->area,
+            'feedback'=>$request->feedback,
+            'image'=>$filename,
+
+
+
+
+
+        ]);
+        return redirect()->route('admin.user.feedback')->with('success','created successfully.');
+    }
+
+
+
+
     public function userfeedbackdelete($id)
     {
 

@@ -24,7 +24,7 @@ class CreateProblemsTable extends Migration
             $table->date('date');
             $table->string('employee_name')->nullable();
 
-
+            
             $table->timestamps();
         });
     }

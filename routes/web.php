@@ -73,6 +73,8 @@ Route::get('/employee/list',[EmployeeController::class,'employeelist'])->name('a
 Route::get('/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
 Route::post('/employees/add',[EmployeeController::class,'add'])->name('employee.add');
 Route::get('employee/view/{nid_number}',[EmployeeController::class,'employeeDetails'])->name('admin.employee.details');
+Route::get('employee/info/edit/{nid_number}',[EmployeeController::class,'employeeEdit'])->name('admin.employee.edit');
+Route::put('employee/info/update/{id}',[EmployeeController::class,'employeeupdate'])->name('admin.employee.info.update');
 Route::get('employees/delete/{id}',[EmployeeController::class,'employeedelete'])->name('admin.employee.details.delete');
 
 
@@ -86,6 +88,8 @@ Route::get('/problem/list',[ProblemController::class,'problemlist'])->name('admi
 Route::get('/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
 Route::post('/problems/store',[ProblemController::class,'store'])->name('problem.store');
 Route::get('probleminfo/view/{nid_number}',[ProblemController::class,'probleminfoDetails'])->name('admin.problem.info.details');
+Route::get('probleminfo/edit/{nid_number}',[ProblemController::class,'problemEdit'])->name('admin.problem.edit');
+Route::put('probleminfo/update/{id}',[ProblemController::class,'problemupdate'])->name('admin.problem.info.update');
 Route::get('probleminfo/delete/{id}',[ProblemController::class,'probleminfoDelete'])->name('admin.problem.info.delete');
 
 
@@ -115,6 +119,8 @@ Route::get('/userfeedback/list',[UserfeedbackController::class,'userfeedbacklist
 Route::get('/userfeedback/form',[UserfeedbackController::class,'userfeedbackform'])->name('user.feedback.form');
 Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name('userfeedback.store');
 Route::get('userfeedback/view/{user_nid}',[UserfeedbackController::class,'userfeedbackDetails'])->name('admin.user.feedback.details');
+Route::get('userfeedback/edit/{id}',[UserfeedbackController::class,'userfeedbackedit'])->name('admin.user.feedback.edit');
+Route::put('userfeedback/update/{id}',[UserfeedbackController::class,'userfeedbackupdate'])->name('admin.user.feedback.update');
 Route::get('userfeedback/delete/{id}',[UserfeedbackController::class,'userfeedbackdelete'])->name('admin.user.feedback.delete');
 
 // Assign Employee

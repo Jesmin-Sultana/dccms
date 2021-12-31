@@ -37,6 +37,10 @@
 
       </td>
       <td>
+      <a class="btn btn-danger" href="{{route('admin.employee.edit',$data->id)}}">Edit</a>
+
+      </td>
+      <td>
       <a class="btn btn-warning" href="{{route('admin.employee.details.delete',$data->id)}}">Delete</a>
 
       </td>

@@ -1,0 +1,59 @@
+@extends('admin.master')
+@section('main')
+
+<form action="{{route('admin.employee.info.update', $employee->id)}}" method='post'>
+@method('PUT')
+
+    @csrf
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Employee Name</label>
+    <input name="employee_name" value="{{$employee->employee_name}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your NID Number</label>
+    <input name="nid_number" value="{{$employee->nid_number}}" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Address</label>
+    <input name="address" value="{{$employee->address}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Phone Number</label>
+    <input name="phone_number" value="{{$employee->phone_number}}" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Age</label>
+    <input name="age" value="{{$employee->age}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Gender</label>
+    <!-- <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    <select name="gender" id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Working Field</label>
+    <!-- <input name="working_field" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    <select name="working_field" id="working_field">
+    <option value="electricity">Electricity</option>
+    <option value="water">Water</option>
+    <option value="gas">Gas</option>
+    <option value="street">Street</option>
+    <option value="mosquito">Mosquito</option>
+    <option value="waterlogging">Waterlogging</option>
+    <option value="garbage">Garbage</option>
+    <option value="sewage">Sewage</option>
+
+  </select>
+  </div>
+  
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+@endsection

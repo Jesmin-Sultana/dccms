@@ -33,6 +33,10 @@
         <a class="btn btn-info" href="{{route('admin.user.feedback.details',$data->user_nid)}}">View</a>
       </td>
       <td>
+      <a class="btn btn-danger" href="{{route('admin.user.feedback.edit',$data->id)}}">Edit</a>
+
+      </td>
+      <td>
       <a class="btn btn-success" href="{{route('admin.user.feedback.delete',$data->id)}}">Delete</a>
 
       </td>

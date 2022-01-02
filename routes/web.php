@@ -35,14 +35,14 @@ use App\Http\Controllers\Frontend\ShowEtaskController;
 //     return view('website.pages.home');
 // });
 
-Route::group(['prefix'=>'admin'],function(){
+// Route::group(['prefix'=>'admin'],function(){
 
 // Admin Login
 Route::get('/login',[AdminloginController::class,'login'])->name('admin.login');
 Route::post('/login',[AdminloginController::class,'dologin'])->name('admin.do.login');
 
 
-Route::group(['middleware'=>'auth'],function (){
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
     Route::get('/', function () {
         return view('admin.layouts.dashboard');
     })->name('admin.dashboard');
@@ -81,7 +81,7 @@ Route::get('employees/delete/{id}',[EmployeeController::class,'employeedelete'])
 // user
 Route::get('/user/list',[UserController::class,'userlist'])->name('admin.user');
 // Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
-// Route::post('/users/store',[UserController::class,'store'])->name('usertable.store');
+// Route::post('/users/store',[UserController::class,'userstore'])->name('usertable.store');
 
 // city corporation problems
 Route::get('/problem/list',[ProblemController::class,'problemlist'])->name('admin.problems.list');
@@ -91,8 +91,7 @@ Route::get('probleminfo/view/{nid_number}',[ProblemController::class,'probleminf
 Route::get('probleminfo/edit/{nid_number}',[ProblemController::class,'problemEdit'])->name('admin.problem.edit');
 Route::put('probleminfo/update/{id}',[ProblemController::class,'problemupdate'])->name('admin.problem.info.update');
 Route::get('probleminfo/delete/{id}',[ProblemController::class,'probleminfoDelete'])->name('admin.problem.info.delete');
-
-
+Route::put('assign/employee/update/{id}',[ProblemController::class,'assignemployeeupdate'])->name('admin.do.assign.employee');
 
 
 
@@ -128,6 +127,10 @@ Route::get('/assign/employee/list',[AssignemployeeController::class,'assignform'
 
 // Problem Type
 Route::get('/problem/type/list',[TypeproblemController::class,'typeform'])->name('admin.problem.type');
+Route::get('/problem/type/form',[TypeproblemController::class,'typeprob'])->name('admin.typeproblem.form');
+Route::post('/problem/type/store',[TypeproblemController::class, 'problemstore'])->name('admin.type.problem.store');
+
+
 
 
 
@@ -137,7 +140,7 @@ Route::get('/problem/type/list',[TypeproblemController::class,'typeform'])->name
 
 
 });
-});
+// });
 
 
 
@@ -174,6 +177,8 @@ Route::post('/user/website/problem/show',[ProblemshowController::class,'doshowpr
 // User Profile
 
 Route::get('/user/profile',[UserprofileController::class,'userprofilew'])->name('website.user.profile');
+Route::post('/user/store/profile',[UserprofileController::class,'userprofilewstore'])->name('user.website.profile.store');
+
 
 // Website User Feedback
 

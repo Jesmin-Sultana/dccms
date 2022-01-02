@@ -19,13 +19,15 @@ class UsersTableSeeder extends Seeder
                 'first_name'=>'admin',
                 'last_name'=>'panel',
                 'nid_number'=>'12345',
-                'email'=>'admin@gmail.com',
+                'email'=>'admin.panel@gmail.com',
                 'phone_number'=>'0191567',
                 'gender'=>'female',
                 'city'=>'dhaka',
                 'country'=>'bangladesh',
                 'address'=>'uttara',
                 'password'=>bcrypt('hira'),
+                'role'=>'admin'
+
             ]
         );
     }

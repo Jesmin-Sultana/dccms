@@ -5,7 +5,7 @@
 <form action="{{route('admin.problem.info.update', $problem->id)}}" method='post'>
 @method('PUT')
 
-    @csrf>
+    @csrf
     
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your NID Number</label>

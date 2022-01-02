@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function employeelist(){
+    public function employeelist(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $employee = Employee::where('nid_number','Like', '%'.$search.'%')
+                ->orWhere('employee_name','like','%'.$search.'%')->get();
+            return view('admin.layouts.employee_list',compact('employee'));
+        }
         $employee = Employee::all();
         // dd($employee);
         return view('admin.layouts.employee_list',compact('employee'));

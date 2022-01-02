@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Problem;
+use App\Models\Typeproblem;
 
 use Illuminate\Http\Request;
 
@@ -11,7 +12,9 @@ class ProblemshowController extends Controller
 {
     public function websiteproblem(){
         $problem = Problem::all();
-        return view('website.website_pages.show_cityproblem',compact('problem'));
+        $problem_type = Typeproblem::all();
+// dd($problem_type);
+        return view('website.website_pages.show_cityproblem',compact('problem','problem_type'));
     }
 
     public function doshowproblem(Request $request){

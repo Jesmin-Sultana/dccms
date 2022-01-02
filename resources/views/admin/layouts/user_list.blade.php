@@ -16,7 +16,8 @@
     <th scope="col">City</th>
     <th scope="col">Country</th>
     <th scope="col">Address</th>
-    <th scope="col">Password</th>
+    <th scope="col">Role</th>
+
     </tr>
   </thead>
   <tbody>
@@ -32,7 +33,8 @@
       <td>{{$data->city}}</td>
       <td>{{$data->country}}</td>
       <td>{{$data->address}}</td>
-      <td>{{$data->password}}</td>
+      <td>{{$data->role}}</td>
+
     </tr>
     @endforeach
   </tbody>

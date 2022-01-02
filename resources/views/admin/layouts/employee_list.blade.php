@@ -5,6 +5,23 @@
 <h1>Employee List</h1>
 <a href="{{route('admin.employee.form')}}" class="btn btn-warning">Add Employee</a>
 
+<!-- search -->
+<form action="{{route('admin.employee')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-danger">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+
+<!-- ending search -->
+
+
 
 <table class="table">
   <thead>

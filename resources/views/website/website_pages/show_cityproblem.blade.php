@@ -48,13 +48,10 @@
 	<div class="form-group">
 		<label>Problem Type</label>
 		<select name="problem_type" id="problem_type">
-    <option value="electricity">Electricity</option>
-    <option value="water">Water</option>
-    <option value="gas">Gas</option>
-    <option value="garbage">Garbage</option>
-	<option value="waterlogging">Waterlogging</option>
-	<option value="mosquito">Mosquito</option>
-	<option value="street">Street</option>
+			@foreach($problem_type as $data)
+    <option value="{{$data->id}}">{{$data->problem_type}}</option>
+	@endforeach
+
 
 
 

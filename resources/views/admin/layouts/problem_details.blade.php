@@ -2,6 +2,10 @@
 
 
 @section('main')
+<form class="print_order">
+        <input class="btn btn-danger" type="button" onClick="PrintDiv();" value="Print">
+    </form>
+    <div id="divToPrint">
     <h1>Objection Info Details</h1>
 
     
@@ -9,11 +13,20 @@
 <p>Name:{{$problem->name}}</span></h4></p>
 <p>Phone Number: {{$problem->phone_number}}</p>
 <p> Area: {{$problem->area}}</p>
+<p> Problem Type: {{$problem->problemtype->problem_type}}</p>
 <p> Description of Problem: {{$problem->description_problem}}</p>
 <p> Date: {{$problem->date}}</p>
 
 
-
+<script language="javascript">
+    function PrintDiv() {
+        var divToPrint = document.getElementById('divToPrint');
+        var popupWin = window.open('', '_blank', 'width=1100,height=700');
+        popupWin.document.open();
+        popupWin.document.write('<html><head><link href="http://127.0.0.1:8000/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
+        popupWin.document.close();
+    }
+</script>
 
 <!DOCTYPE html>
 <html>
@@ -23,17 +36,24 @@
 
 <!-- <p>The select element is used to create a drop-down list.</p> -->
 
-<form action="/action_page.php">
-  <label for="employee">Choose an employee:</label>
-  <select name="problem" id="problem">
-    <option value="hira">Hira</option>
-    <option value="jesmin">Jesmin</option>
-    <option value="jabib">Jabib</option>
-    <option value="mira">Mira</option>
+<form action="{{route('admin.do.assign.employee',$problem->id)}}" method='post'>
+@method('PUT')
+@csrf
+
+  <label for="employee_name">Choose an Employee Name:</label>
+  <select name="employee_name" id="employee_name">
+  @foreach($employee as $emp)
+    <option value="{{$emp->id}}">{{$emp->employee_name}}</option>
+    @endforeach
   </select>
   <br><br>
-  <!-- <input type="submit" value="Submit"> -->
-  <a href="#" class="btn btn-danger">Submit</a>
+
+
+
+
+  
+  <input type="submit" value="Submit">
+  <!-- <a href="#" class="btn btn-danger">Submit</a> -->
 
 </form>
 

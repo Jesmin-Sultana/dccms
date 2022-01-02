@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 
 class UserfeedbackController extends Controller
 {
-    public function userfeedbacklist(){
+    public function userfeedbacklist(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $userfeedback = Userfeedback::where('user_name','Like', '%'.$search.'%')
+                ->orWhere('user_nid','like','%'.$search.'%')->get();
+            return view('admin.layouts.userfeedback_list',compact('userfeedback'));
+        }
         $userfeedback = Userfeedback::all();
         // dd($userfeedback);
         return view('admin.layouts.userfeedback_list',compact('userfeedback'));

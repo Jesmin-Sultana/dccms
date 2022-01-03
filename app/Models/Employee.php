@@ -9,4 +9,8 @@ class Employee extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    public function workingfield(){
+        return $this->belongsTo(Typeproblem::class,'working_field','id');
+    }
 }

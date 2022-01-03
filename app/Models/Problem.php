@@ -9,8 +9,9 @@ class Problem extends Model
 {
     use HasFactory;
     protected $guarded=[];
-public function problemtype(){
-    return $this->belongsTo(Typeproblem::class,'problem_type','id');
-}
+
+    public function problemtype(){
+        return $this->belongsTo(Typeproblem::class,'problem_type','id');
+    }
 
 }

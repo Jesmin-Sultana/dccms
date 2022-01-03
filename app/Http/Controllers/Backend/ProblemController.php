@@ -43,7 +43,7 @@ class ProblemController extends Controller
 
       $problem=Problem::where('nid_number',$nid_number)->first();
         // dd($problem);
-      $employee=Employee::with('problemtype')->where('working_field',$problem->problem_type)->get();
+      $employee=Employee::where('working_field',$problem->problem_type)->get();
         // dd($employee);
 
     

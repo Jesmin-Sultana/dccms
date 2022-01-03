@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
+use App\Models\Typeproblem;
+
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -16,13 +18,17 @@ class EmployeeController extends Controller
                 ->orWhere('employee_name','like','%'.$search.'%')->get();
             return view('admin.layouts.employee_list',compact('employee'));
         }
-        $employee = Employee::all();
+        $employee = Employee::with('workingfield')->get();
         // dd($employee);
         return view('admin.layouts.employee_list',compact('employee'));
     }
 
     public function employeeform(){
-        return view('admin.layouts.employee_form');
+        
+
+        $working_field = Typeproblem::all();
+        // dd($working_field);
+        return view('admin.layouts.employee_form',compact('working_field'));
     }
     public function add(Request $request){
         employee::create([

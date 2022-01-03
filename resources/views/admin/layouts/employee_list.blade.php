@@ -47,7 +47,9 @@
       <td>{{$data->phone_number}}</td>
       <td>{{$data->age}}</td>
       <td>{{$data->gender}}</td>
-      <td>{{$data->working_field}}</td>
+
+      <td>{{optional($data->workingfield)->problem_type}}</td>
+
 
       <td>
       <a class="btn btn-success" href="{{route('admin.employee.details',$data->nid_number)}}">View</a>

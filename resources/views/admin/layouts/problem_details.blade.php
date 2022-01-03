@@ -2,35 +2,28 @@
 
 
 @section('main')
+
 <form class="print_order">
         <input class="btn btn-danger" type="button" onClick="PrintDiv();" value="Print">
     </form>
-    <div id="divToPrint">
+<div id="divToPrint">
     <h1>Objection Info Details</h1>
 
-    
-<p>NID Number: {{$problem->nid_number}}</p>
-<p>Name:{{$problem->name}}</span></h4></p>
-<p>Phone Number: {{$problem->phone_number}}</p>
-<p> Area: {{$problem->area}}</p>
-<p> Problem Type: {{$problem->problemtype->problem_type}}</p>
-<p> Description of Problem: {{$problem->description_problem}}</p>
-<p> Date: {{$problem->date}}</p>
+        
+    <p>NID Number: {{$problem->nid_number}}</p>
+    <p>Name:{{$problem->name}}</span></h4></p>
+    <p>Phone Number: {{$problem->phone_number}}</p>
+    <p> Area: {{$problem->area}}</p>
+    <p> Problem Type: {{$problem->problemtype->problem_type}}</p>
+    <p> Description of Problem: {{$problem->description_problem}}</p>
+    <p> Date: {{$problem->date}}</p>
+</div>
 
 
-<script language="javascript">
-    function PrintDiv() {
-        var divToPrint = document.getElementById('divToPrint');
-        var popupWin = window.open('', '_blank', 'width=1100,height=700');
-        popupWin.document.open();
-        popupWin.document.write('<html><head><link href="http://127.0.0.1:8000/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
-        popupWin.document.close();
-    }
-</script>
 
-<!DOCTYPE html>
-<html>
-<body>
+
+
+
 
 <h1>Select an Employee</h1>
 
@@ -59,8 +52,7 @@
 
 <p>Click the "Submit" button and the form-data will be sent to a page on the Employee".</p>
 
-</body>
-</html>
+
 
 
 
@@ -69,5 +61,12 @@
 
 
 
-
-
+<script language="javascript">
+    function PrintDiv() {
+        var divToPrint = document.getElementById('divToPrint');
+        var popupWin = window.open('', '_blank', 'width=1100,height=700');
+        popupWin.document.open();
+        popupWin.document.write('<html><head><link href="http://127.0.0.1:8000/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
+        popupWin.document.close();
+    }
+</script>

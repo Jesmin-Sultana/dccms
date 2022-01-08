@@ -28,10 +28,14 @@
     <tr>
       <th scope="col">Employee Name</th>
       <th scope="col">NID Number</th>
-      <th scope="col">Address</th>
+      <th scope="col">Email</th>
       <th scope="col">Phone Number</th>
-      <th scope="col">Age</th>
       <th scope="col">Gender</th>
+      <th scope="col">City</th>
+      <th scope="col">Country</th>
+      <th scope="col">Address</th>     
+
+
       <th scope="col">Working Field</th>
       <th scope="col">Action</th>
 
@@ -43,10 +47,13 @@
     <tr>
       <th scope="row">{{$data->employee_name}}</th>
       <td>{{$data->nid_number}}</td>
-      <td>{{$data->address}}</td>
+      <td>{{$data->email}}</td>
       <td>{{$data->phone_number}}</td>
-      <td>{{$data->age}}</td>
       <td>{{$data->gender}}</td>
+      <td>{{$data->city}}</td>
+      <td>{{$data->country}}</td>
+      <td>{{$data->address}}</td>
+
 
       <td>{{optional($data->workingfield)->problem_type}}</td>
 

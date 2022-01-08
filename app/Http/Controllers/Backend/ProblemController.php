@@ -39,6 +39,8 @@ class ProblemController extends Controller
 
     public function probleminfoDetails($nid_number)
     {
+
+        
       
 
       $problem=Problem::where('nid_number',$nid_number)->first();

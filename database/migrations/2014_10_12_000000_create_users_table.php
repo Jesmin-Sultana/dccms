@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('country');
             $table->string('address');
             $table->string('password');
+            $table->string('working_field')->nullable();
+
             // $table->string('confirm_password');
             $table->string('role',20)->default('user');
             // $table->string('role',20)->default('employee');

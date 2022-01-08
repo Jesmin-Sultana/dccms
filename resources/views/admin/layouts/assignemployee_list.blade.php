@@ -1,23 +1,24 @@
 @extends('admin.master')
 
 @section('main')
-
+<h1>Show Assigned Employee</h1>
 <table class="table">
   <thead>
+
     <tr>
       <th scope="col">Employee Name</th>
-      <th scope="col">Employee NID</th>
-      <th scope="col">Problem Type</th>
       <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
+  @foreach($data as $assign )
+
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{$assign->employee->employee_name}}</th>
+      <td>{{$assign->status}}</td>
     </tr>
+    @endforeach
+
     
   </tbody>
 </table>

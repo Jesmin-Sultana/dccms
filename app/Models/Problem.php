@@ -14,4 +14,11 @@ class Problem extends Model
         return $this->belongsTo(Typeproblem::class,'problem_type','id');
     }
 
+    public function employee(){
+        return $this->belongsTo(Employee::class,'employee_name','id');
+    }
+    // public function employeename(){
+    //     return $this->belongsTo(Employee::class,'employee_name','id');
+    // }
+
 }

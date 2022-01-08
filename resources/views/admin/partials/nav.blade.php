@@ -11,7 +11,7 @@
                 </div>
             </form> -->
 
-            <li><a class="btn btn-danger" href="{{route('admin.logout')}}">Logout</a></li>
+            <li><a class="btn btn-danger" href="{{route('admin.logout')}}">{{auth()->user()->name}} ({{auth()->user()->role}}) | Logout</a></li>
 
             <!-- Navbar-->
             <!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">

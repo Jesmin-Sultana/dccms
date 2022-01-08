@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
 use App\Models\Typeproblem;
+// use App\Models\Assigned;
 
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
     public function employeelist(Request $request){
+
 
         $search = $request->query('search');
         if($search){
@@ -20,8 +22,12 @@ class EmployeeController extends Controller
         }
         $employee = Employee::with('workingfield')->get();
         // dd($employee);
+
+
         return view('admin.layouts.employee_list',compact('employee'));
     }
+
+
 
     public function employeeform(){
         
@@ -30,19 +36,37 @@ class EmployeeController extends Controller
         // dd($working_field);
         return view('admin.layouts.employee_form',compact('working_field'));
     }
+   
+
     public function add(Request $request){
-        employee::create([
+       
+        $employee = employee::create([
+
+
             'employee_name'=>$request->employee_name,
             'nid_number'=>$request->nid_number,
-            'address'=>$request->address,
+            'email'=>$request->email,
             'phone_number'=>$request->phone_number,
-            'age'=>$request->age,
             'gender'=>$request->gender,
+            'city'=>$request->city,
+            'country'=>$request->country,
+            'address'=>$request->address,
+            'password'=>bcrypt($request->password),
+
+
             'working_field'=>$request->working_field,
 
         ]);
+
+        
+
         return redirect()->route('admin.employee');
     }
+
+
+   
+       
+
 
     public function employeeDetails($nid_number)
     {

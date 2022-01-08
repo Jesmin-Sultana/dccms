@@ -7,6 +7,13 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></i></div>
                                 Dashboard
                             </a>
+                            <a class="nav-link" href="{{route('admin.employee')}}">
+                                <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
+                                Employee
+                            </a>
+
+                            @if(auth()->user()->role=='admin')
+
 
                             <a class="nav-link" href="{{route('admin.adminpart')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
@@ -16,10 +23,7 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 User
                             </a>
-                            <a class="nav-link" href="{{route('admin.employee')}}">
-                                <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
-                                Employee
-                            </a>
+                           
                             <a class="nav-link" href="{{route('admin.assign.employee')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 Assign_Employee
@@ -54,6 +58,8 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                Report 
                             </a>
+
+                            @endif
                            <!-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

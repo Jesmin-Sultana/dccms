@@ -39,7 +39,9 @@
       <td>{{$data->name}}</td>
       <td>{{$data->phone_number}}</td>
       <td>{{$data->area}}</td>
+
       <td>{{optional($data->problemtype)->problem_type}}</td>
+
       <td>{{$data->description_problem}}</td>
       <td>{{$data->date}}</td>
 

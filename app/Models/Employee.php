@@ -13,4 +13,9 @@ class Employee extends Model
     public function workingfield(){
         return $this->belongsTo(Typeproblem::class,'working_field','id');
     }
+
+
+    // public function employeename(){
+    //     return $this->belongsTo(Assigned::class,'employee_name','id');
+    // }
 }

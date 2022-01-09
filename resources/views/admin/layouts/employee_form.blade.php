@@ -43,10 +43,7 @@
     <label for="exampleInputEmail1" class="form-label">Enter Your Address</label>
     <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Password</label>
-    <input name="password" type="string" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+  
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Working Field</label>
     <!-- <input name="working_field" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->

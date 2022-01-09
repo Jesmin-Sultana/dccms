@@ -16,7 +16,7 @@ class CreateAssignedsTable extends Migration
         Schema::create('assigneds', function (Blueprint $table) {
             $table->id();
             $table->string('employee_name');
-            $table->string('status');
+            
 
 
             $table->timestamps();

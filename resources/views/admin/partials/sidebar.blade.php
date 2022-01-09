@@ -9,7 +9,7 @@
                             </a>
                             <a class="nav-link" href="{{route('admin.employee')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
-                                Employee
+                                Add Employee
                             </a>
 
                             @if(auth()->user()->role=='admin')
@@ -22,6 +22,10 @@
                             <a class="nav-link" href="{{route('admin.user')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 User
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
+                                Employees
                             </a>
                            
                             <a class="nav-link" href="{{route('admin.assign.employee')}}">

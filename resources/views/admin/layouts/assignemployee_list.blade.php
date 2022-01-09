@@ -7,7 +7,7 @@
 
     <tr>
       <th scope="col">Employee Name</th>
-      <th scope="col">Status</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -15,7 +15,7 @@
 
     <tr>
       <th scope="row">{{$assign->employee->employee_name}}</th>
-      <td>{{$assign->status}}</td>
+      
     </tr>
     @endforeach
 

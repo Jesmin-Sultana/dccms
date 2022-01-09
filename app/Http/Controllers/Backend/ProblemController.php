@@ -105,6 +105,21 @@ public function assignemployeeupdate(Request $request,$id)
         'employee_name'=>$request->employee_name,
         
     ]);
-    return redirect()->route('admin.problems.list')->with('success','Objection Info Updated Successfully.');
+
+    $problem->employee->update([
+        'status'=> 'not-available'
+    ]);
+    return redirect()->route('admin.assign.employee')->with('success','Objection Info Updated Successfully.');
 }
+
+
+public function statusupdate($id){
+
+    $problem=Problem::find($id);
+
+    return redirect()->back();
+}
+
+
+
 }

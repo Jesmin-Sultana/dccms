@@ -22,8 +22,10 @@
 
 
 <article class="card-body">
-<form action="{{route('user.do.registration')}}" method='post'>
+<form action="{{route('website.do.employee.registration')}}" method='post'>
     @csrf
+
+    <input type="hidden" value="employee" name="employee_role">
 	 <div class="form-row">
 		<div class="col form-group">
 			<label>First name </label>   
@@ -79,11 +81,7 @@
 
              <option selected="">Bangladesh</option>
 
-		      <!-- <option>Uzbekistan</option>
-		      <option>Russia</option>
-		      <option>United States</option>
-		      <option>India</option>
-		      <option>Afganistan</option> -->
+		     
 		  </select>
 		</div> 
 		<!-- form-group end.//  -->
@@ -100,10 +98,7 @@
 
 
 
-	<!-- <div class="form-group">
-		<label>Create password</label>
-	    <input  class="form-control" name="create_password" type="password">
-	</div> form-group end.//   -->
+	
     <div class="form-group">
 		<label>password</label>
 	    <input  class="form-control" name="password" type="password">
@@ -126,16 +121,3 @@
 
 
 </div> 
-<!--container end.//-->
-
-<!-- <br><br>
-<article class="bg-secondary mb-3">  
-<div class="card-body text-center">
-    <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
-<p class="h5 text-white">Components and templates  <br> for Ecommerce, marketplace, booking websites 
-and product landing pages</p>   <br>
-<p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com  
- <i class="fa fa-window-restore "></i></a></p>
-</div>
-<br><br>
-</article> -->

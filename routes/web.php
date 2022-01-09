@@ -19,6 +19,7 @@ use App\Http\Controllers\Backend\TypeproblemController;
 use App\Http\Controllers\Frontend\UserprofileController;
 use App\Http\Controllers\Frontend\ShowUserFeedbackController;
 use App\Http\Controllers\Frontend\ShowEtaskController;
+use App\Http\Controllers\Frontend\EmployeeRegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,6 +93,8 @@ Route::get('probleminfo/edit/{nid_number}',[ProblemController::class,'problemEdi
 Route::put('probleminfo/update/{id}',[ProblemController::class,'problemupdate'])->name('admin.problem.info.update');
 Route::get('probleminfo/delete/{id}',[ProblemController::class,'probleminfoDelete'])->name('admin.problem.info.delete');
 Route::put('assign/employee/update/{id}',[ProblemController::class,'assignemployeeupdate'])->name('admin.do.assign.employee');
+
+Route::get('/assign/employee/status/{id}',[ProblemController::class,'statusupdate'])->name('admin.assign.employee.status');
 
 
 
@@ -190,4 +193,6 @@ Route::get('/employee/show/feedback',[ShowEtaskController::class,'etaskw'])->nam
 Route::post('/employee/website/feedback',[ShowEtaskController::class,'doetaskfeedback'])->name('admin.etasks.list');
 
 
-
+// Employee Registration
+Route::get('/website/employee/registration',[EmployeeRegistrationController::class,'employeereg'])->name('website.employee.registration');
+Route::post('/website/employee/registration/store',[EmployeeRegistrationController::class,'doemployeeregistration'])->name('website.do.employee.registration');

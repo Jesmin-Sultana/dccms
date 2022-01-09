@@ -28,10 +28,12 @@ class CreateEmployeesTable extends Migration
 
 
             $table->string('address');
-            $table->string('password');
 
 
             $table->string('working_field');
+
+            $table->string('status')->default('available');
+
 
             $table->timestamps();
         });

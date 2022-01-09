@@ -45,6 +45,8 @@
       <td>{{$data->description_problem}}</td>
       <td>{{$data->date}}</td>
 
+
+     
       <td>
       <a class="btn btn-dark" href="{{route('admin.problem.info.details',$data->nid_number)}}">View</a>
 

@@ -37,6 +37,8 @@
 
 
       <th scope="col">Working Field</th>
+      <th scope="col">Status</th>     
+
       <th scope="col">Action</th>
 
 
@@ -56,6 +58,9 @@
 
 
       <td>{{optional($data->workingfield)->problem_type}}</td>
+
+      <td>{{$data->status}}</td>
+
 
 
       <td>

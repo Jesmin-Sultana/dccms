@@ -12,11 +12,11 @@
                 <li><a href="{{route('website.show.user.feedback')}}">User Feedback</a></li>
                 <li><a href="{{route('website.show.employee.feedback')}}">Feeedback of Complation Task</a></li>
                 <!-- <li><a href="contact.html">Tax</a></li> -->
-                <!-- <li><a href="contact.html">Report</a></li> -->
+                <li><a href="{{route('website.employee.registration')}}">Employee Registration</a></li>
                 @if(auth()->user())
                 <li><a href="{{route('user.logout')}}">Logout</a></li>
                 @else
-                <li><a href="{{route('user.registration')}}">Registration</a></li>
+                <li><a href="{{route('user.registration')}}">User Registration</a></li>
                 <li><a href="{{route('user.login')}}">Login</a></li>
                 @endif
 

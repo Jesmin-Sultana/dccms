@@ -51,7 +51,6 @@ class EmployeeController extends Controller
             'city'=>$request->city,
             'country'=>$request->country,
             'address'=>$request->address,
-            'password'=>bcrypt($request->password),
 
 
             'working_field'=>$request->working_field,

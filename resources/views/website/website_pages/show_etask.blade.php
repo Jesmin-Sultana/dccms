@@ -24,33 +24,19 @@
 
 
 <article class="card-body">
-<form action="{{route('admin.etasks.list')}}" method='post'  enctype="multipart/form-data">
+<form action="{{route('admin.etasks.list',$problem->id)}}" method='post'  enctype="multipart/form-data">
 	@csrf
-
-    <div class="form-group">
-		<label>Employee NID Number</label>
-		<input name="employee_nid" type="number" class="form-control" placeholder="">
-	</div>
-    <div class="form-group">
-		<label>Employee Name</label>
-		<input name="employee_name" type="text" class="form-control" placeholder="">
-	</div>
-    <div class="form-group">
-		<label>User NID</label>
-		<input name="user_nid" type="number" class="form-control" placeholder="">
-	</div>
-
+	
 	<div class="form-group">
-		<label>User Name</label>
-		<input name="user_name" type="text" class="form-control" placeholder="">
-	</div>
-	
-	
+		<label>Employee Name</label>
+		<select name="employee_name" id="employee_name" class="form-control">
 
-    <!-- <div class="form-group">
-		<label>Phone Number</label>
-		<input name="phone_number" type="number" class="form-control" placeholder="">
-	</div> -->
+    <option value="{{ $problem->employee->id}}">{{ $problem->employee->employee_name}}</option>
+    
+  </select>
+  <br><br>
+	</div>
+   
     <div class="form-group">
 		<label>Problem Area</label>
 		<input name="problem_area" type="text" class="form-control" placeholder="">
@@ -58,7 +44,7 @@
    
 	<div class="form-group">
 		<label>Work Type</label>
-		<select name="work_type" id="'work_type'">
+		<select name="work_type" id="work_type" class="form-control">
     <option value="electricity">Electricity</option>
     <option value="water">Water</option>
     <option value="gas">Gas</option>

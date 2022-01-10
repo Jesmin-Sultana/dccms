@@ -3,6 +3,8 @@
 @section('main')
 <h1>Objection Site</h1>
 <a href="{{route('problem.form')}}"></a>
+
+
 <!-- search -->
 <form action="{{route('admin.problems.list')}}">
 <div class="input-group rounded mt-3 mb-2">

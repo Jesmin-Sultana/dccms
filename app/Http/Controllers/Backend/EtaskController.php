@@ -61,10 +61,10 @@ class EtaskController extends Controller
         return redirect()->route('admin.etask.list');
     }
 
-    public function etaskDetails($employee_nid)
+    public function etaskDetails($id)
     {
 
-        $etask=Etask::where('employee_nid',$employee_nid)->first();
+        $etask=Etask::where('id',$id)->first();
     
         return view('admin.layouts.etask_details',compact('etask'));
     }

@@ -6,17 +6,19 @@
 <form class="print_order">
         <input class="btn btn-danger" type="button" onClick="PrintDiv();" value="Print">
     </form>
-<div id="divToPrint">
+<div id="divToPrint" style="margin-left:230px;">
     <h1>Objection Info Details</h1>
 
         
-    <p>NID Number: {{$problem->nid_number}}</p>
-    <p>Name:{{$problem->name}}</span></h4></p>
-    <p>Phone Number: {{$problem->phone_number}}</p>
-    <p> Area: {{$problem->area}}</p>
-    <p> Problem Type: {{$problem->problemtype->problem_type}}</p>
-    <p> Description of Problem: {{$problem->description_problem}}</p>
-    <p> Date: {{$problem->date}}</p>
+    <div style="margin-left:98px;">
+      <p>NID Number: {{$problem->nid_number}}</p>
+      <p>Name:{{$problem->name}}</span></h4></p>
+      <p>Phone Number: {{$problem->phone_number}}</p>
+      <p> Area: {{$problem->area}}</p>
+      <p> Problem Type: {{$problem->problemtype->problem_type}}</p>
+      <p> Description of Problem: {{$problem->description_problem}}</p>
+      <p> Date: {{$problem->date}}</p>
+    </div>
 </div>
 
 

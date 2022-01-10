@@ -1,6 +1,18 @@
 
-<style type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+
+</head>
+<body>
+
+<style>
 body{margin-top:20px;
 color: #000000;
     background: #800000;
@@ -42,26 +54,21 @@ color: #000000;
     margin-bottom: 1rem;
 }
 .form-control {
-    border: 1px solid #596280;
+
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
     font-size: .825rem;
-    background: #1A233A;
+   
     color: #bcd0f7;
 }
 
 </style>
 
 
- 
 
-
-
-
-
- <div class="container">
-<div class="row gutters">
+<div class="container">
+	<div class="row gutters">
 	<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
 		<div class="card h-100">
 			<div class="card-body">
@@ -221,16 +228,68 @@ color: #000000;
 					</div>
 				</div>
 				</form>
+<br>
+<h1>Problem List</h1>
+				<table class="table">
+  <thead>
+    <tr>
+	<th scope="col">NID Number</th>
+	
+      <th scope="col">Name</th> <br>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Area</th>
+      <th scope="col">Problem Type</th>
+      <th scope="col">Description of Problem</th>
+      <th scope="col">Date</th> 
+      <th scope="col">Action</th> 
+    </tr>
+  </thead>
+  <tbody>
+      @foreach($problem as $data )
+    <tr>
+      <th scope="row">{{$data->nid_number}}</th>
+      <td>{{$data->name}}</td>
+      <td>{{$data->phone_number}}</td>
+      <td>{{$data->area}}</td>
+
+      <td>{{optional($data->problemtype)->problem_type}}</td>
+
+      <td>{{$data->description_problem}}</td>
+      <td>{{$data->date}}</td>
+
+      <td>
+      <a class="btn btn-dark" href="{{route('website.problem.info.details',$data->id)}}" class="btn btn-danger">View</a>
+      </td>
+      
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+
+
+				
 			</div>
 
 
 		</div>
 	</div>
+
 </div>
-</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
 
 
  
-
 
 

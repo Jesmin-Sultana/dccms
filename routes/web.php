@@ -109,7 +109,7 @@ Route::get('/report/form',[ReportController::class,'reportform'])->name('report.
 Route::get('/etask/list',[EtaskController::class,'etasklist'])->name('admin.etask.list');
 Route::get('/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
-Route::get('employeefeedback/view/{employee_nid}',[EtaskController::class,'etaskDetails'])->name('admin.Employee.feedback.details');
+Route::get('employeefeedback/view/{id}',[EtaskController::class,'etaskDetails'])->name('admin.Employee.feedback.details');
 Route::get('etask/edit/{employee_nid}',[EtaskController::class,'etaskEdit'])->name('admin.etask.edit');
 Route::put('etask/update/{id}',[EtaskController::class,'etaskupdate'])->name('admin.etask.update');
 Route::get('employeefeedback/delete/{id}',[EtaskController::class,'etaskdelete'])->name('admin.employee.feedback.delete');
@@ -134,20 +134,8 @@ Route::get('/problem/type/form',[TypeproblemController::class,'typeprob'])->name
 Route::post('/problem/type/store',[TypeproblemController::class, 'problemstore'])->name('admin.type.problem.store');
 
 
-
-
-
-
-
-
-
-
 });
 // });
-
-
-
-
 
 
 
@@ -160,10 +148,6 @@ Route::post('/user/do/registration',[LoginController::class,'doregistration'])->
 Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login');
 Route::post('/user/do/login',[LoginController::class,'dologin'])->name('user.do.login');
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
-
-
-
-
 
 
 
@@ -182,6 +166,8 @@ Route::post('/user/website/problem/show',[ProblemshowController::class,'doshowpr
 Route::get('/user/profile',[UserprofileController::class,'userprofilew'])->name('website.user.profile');
 Route::post('/user/store/profile',[UserprofileController::class,'userprofilewstore'])->name('user.website.profile.store');
 
+Route::get('/user/probleminfo/view/{id}',[UserprofileController::class,'showproblemview'])->name('website.problem.info.details');
+
 
 // Website User Feedback
 
@@ -189,7 +175,7 @@ Route::get('/user/show/feedback',[ShowUserFeedbackController::class,'userfeedbac
 Route::post('/user/website/feedback',[ShowUserFeedbackController::class,'douserfeedback'])->name('admin.users.feedback');
 
 // Feedback of Employee
-Route::get('/employee/show/feedback',[ShowEtaskController::class,'etaskw'])->name('website.show.employee.feedback');
+Route::get('/employee/show/feedback/{id}',[ShowEtaskController::class,'etaskw'])->name('website.show.employee.feedback');
 Route::post('/employee/website/feedback',[ShowEtaskController::class,'doetaskfeedback'])->name('admin.etasks.list');
 
 

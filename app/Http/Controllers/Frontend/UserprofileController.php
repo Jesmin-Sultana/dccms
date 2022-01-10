@@ -4,13 +4,24 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Problem;
+// use App\Models\Employee;
+
+
 use Illuminate\Http\Request;
 
 class UserprofileController extends Controller
 {
     public function userprofilew(){
-        return view('website.website_pages.user_profile');
+
+// profile with problem
+        $problem = Problem::all();
+
+        return view('website.website_pages.user_profile',compact('problem'));
     }
+
+
+
     public function assignemployeeupdate(Request $request,$id)
 {
 
@@ -43,5 +54,22 @@ public function userprofilewstore(Request $request){
         return redirect()->route('website.user.profile');
         
     }
+
+
+    public function showproblemview($id)
+    {
+
+        
+      
+
+      $problem=Problem::where('employee_name', auth()->user()->id)->first();
+        // dd($problem);
+
+        return view('website.website_pages.showproblem_details',compact('problem'));
+
+
+
+    }
+
 
 }

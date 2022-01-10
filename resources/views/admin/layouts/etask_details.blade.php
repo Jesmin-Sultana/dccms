@@ -5,20 +5,23 @@
 <form class="print_order">
         <input class="btn btn-primary" type="button" onClick="PrintDiv();" value="Print">
     </form>
-    <div id="divToPrint">
+    <div id="divToPrint" style="margin-left:230px;">
 
     <h1>User Feedback Details</h1>
+
+    <div style="margin-left:98px;">
+
 
     <p>
     <img src = "{{url('/uploads/'.$etask->image)}}" alt="etask image" width="100px">
     </p>
-<p>Employee NID Number: {{$etask->employee_nid}}</p>
-<p>Employee Name: {{$etask->employee_name}}</h4></p>
-<p>User NID: {{$etask->user_nid}}</p>
-<p>User Name: {{$etask->user_name}}</p>
-<p>Problem Area: {{$etask->problem_area}}</p>
-<p>Work Type: {{$etask->work_type}}</p>
-<p>Feedback: {{$etask->feedback}}</p>
+
+    <p>Employee Name: {{$etask->employee->employee_name}}</h4></p>
+    <p>Problem Area: {{$etask->problem_area}}</p>
+    <p>Work Type: {{$etask->work_type}}</p>
+    <p>Feedback: {{$etask->feedback}}</p>
+    </div>
+    </div>
 
 
 

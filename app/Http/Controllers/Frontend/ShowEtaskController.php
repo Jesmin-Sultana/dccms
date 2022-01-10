@@ -4,15 +4,14 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Etask;
-
+use App\Models\Problem;
 use Illuminate\Http\Request;
 
 class ShowEtaskController extends Controller
 {
-    public function etaskw(){
-        $etask = Etask::all();
-
-        return view('website.website_pages.show_etask',compact('etask'));
+    public function etaskw($id){
+        $problem = Problem::find($id);
+        return view('website.website_pages.show_etask',compact('problem'));
     }
 
     public function doetaskfeedback(Request $request){
@@ -38,17 +37,16 @@ class ShowEtaskController extends Controller
         
         
 
-        etask::create([
-            'employee_nid'=>$request->employee_nid,
+       $etask = etask::create([
             'employee_name'=>$request->employee_name,
-            'user_nid'=>$request->user_nid,
-            'user_name'=>$request->user_name,
             'problem_area'=>$request->problem_area,
             'work_type'=>$request->work_type,
             'feedback'=>$request->feedback,
             'image'=>$filename,
+        ]);
 
-
+        $etask->employee->update([
+            'status'=> 'available'
         ]);
         
         return redirect()->back()->with('msg','Thank You For Your Feedback');

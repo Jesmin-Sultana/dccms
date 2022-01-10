@@ -4,13 +4,18 @@
 <div id="tooplate_header" style="background-image: url('/images/tooplate_header.jpg'); width: 100%;">
 
         <div id="tooplate_menu">
-            <ul>
+            <ul style="display: flex; justify-content: space-between; padding-left: 57px;">
                 <li><a href="about.html">About Us</a></li>
+
+                @if(auth()->user())
+
                 <li><a href="{{route('website.user.profile')}}">User Profile</a></li>
                 <!-- <li><a href="contact.html">Employee</a></li> -->
                 <li><a href="{{route('website.show.problem')}}">City Corporation Problem</a></li>
                 <li><a href="{{route('website.show.user.feedback')}}">User Feedback</a></li>
-                <li><a href="{{route('website.show.employee.feedback')}}">Feeedback of Complation Task</a></li>
+                <li><a href="#">Feeedback of Complation Task</a></li>
+                @endif
+
                 <!-- <li><a href="contact.html">Tax</a></li> -->
                 <li><a href="{{route('website.employee.registration')}}">Employee Registration</a></li>
                 @if(auth()->user())

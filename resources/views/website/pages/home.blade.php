@@ -3,7 +3,7 @@
 
 
 
-<div class="service_area">
+<!-- <div class="service_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -63,7 +63,7 @@
               
             </div>
         </div>
-    </div>
+    </div> -->
 
 
  @endsection

@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Models\User;
+use App\Models\Problem;
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\AdminController;
 use App\Http\controllers\Backend\DashboardController;
@@ -73,8 +76,8 @@ Route::get('tax/delete/{id}',[TaxController::class,'taxdelete'])->name('admin.ta
 Route::get('/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
 Route::get('/employee/form',[EmployeeController::class,'employeeform'])->name('admin.employee.form');
 Route::post('/employees/add',[EmployeeController::class,'add'])->name('employee.add');
-Route::get('employee/view/{nid_number}',[EmployeeController::class,'employeeDetails'])->name('admin.employee.details');
-Route::get('employee/info/edit/{nid_number}',[EmployeeController::class,'employeeEdit'])->name('admin.employee.edit');
+Route::get('employee/view/{id}',[EmployeeController::class,'employeeDetails'])->name('admin.employee.details');
+Route::get('employee/info/edit/{id}',[EmployeeController::class,'employeeEdit'])->name('admin.employee.edit');
 Route::put('employee/info/update/{id}',[EmployeeController::class,'employeeupdate'])->name('admin.employee.info.update');
 Route::get('employees/delete/{id}',[EmployeeController::class,'employeedelete'])->name('admin.employee.details.delete');
 
@@ -84,12 +87,16 @@ Route::get('/user/list',[UserController::class,'userlist'])->name('admin.user');
 // Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
 // Route::post('/users/store',[UserController::class,'userstore'])->name('usertable.store');
 
+
+
+
+
 // city corporation problems
 Route::get('/problem/list',[ProblemController::class,'problemlist'])->name('admin.problems.list');
 Route::get('/problem/form',[ProblemController::class,'problemform'])->name('problem.form');
 Route::post('/problems/store',[ProblemController::class,'store'])->name('problem.store');
-Route::get('probleminfo/view/{nid_number}',[ProblemController::class,'probleminfoDetails'])->name('admin.problem.info.details');
-Route::get('probleminfo/edit/{nid_number}',[ProblemController::class,'problemEdit'])->name('admin.problem.edit');
+Route::get('probleminfo/view/{id}',[ProblemController::class,'probleminfoDetails'])->name('admin.problem.info.details');
+Route::get('probleminfo/edit/{id}',[ProblemController::class,'problemEdit'])->name('admin.problem.edit');
 Route::put('probleminfo/update/{id}',[ProblemController::class,'problemupdate'])->name('admin.problem.info.update');
 Route::get('probleminfo/delete/{id}',[ProblemController::class,'probleminfoDelete'])->name('admin.problem.info.delete');
 Route::put('assign/employee/update/{id}',[ProblemController::class,'assignemployeeupdate'])->name('admin.do.assign.employee');
@@ -110,7 +117,7 @@ Route::get('/etask/list',[EtaskController::class,'etasklist'])->name('admin.etas
 Route::get('/etask/form',[EtaskController::class,'etaskform'])->name('etask.form');
 Route::post('/etasks/add',[EtaskController::class,'add'])->name('etask.add');
 Route::get('employeefeedback/view/{id}',[EtaskController::class,'etaskDetails'])->name('admin.Employee.feedback.details');
-Route::get('etask/edit/{employee_nid}',[EtaskController::class,'etaskEdit'])->name('admin.etask.edit');
+Route::get('etask/edit/{id}',[EtaskController::class,'etaskEdit'])->name('admin.etask.edit');
 Route::put('etask/update/{id}',[EtaskController::class,'etaskupdate'])->name('admin.etask.update');
 Route::get('employeefeedback/delete/{id}',[EtaskController::class,'etaskdelete'])->name('admin.employee.feedback.delete');
 
@@ -120,7 +127,7 @@ Route::get('employeefeedback/delete/{id}',[EtaskController::class,'etaskdelete']
 Route::get('/userfeedback/list',[UserfeedbackController::class,'userfeedbacklist'])->name('admin.user.feedback');
 Route::get('/userfeedback/form',[UserfeedbackController::class,'userfeedbackform'])->name('user.feedback.form');
 Route::post('/userfeedback/store',[UserfeedbackController::class,'store'])->name('userfeedback.store');
-Route::get('userfeedback/view/{user_nid}',[UserfeedbackController::class,'userfeedbackDetails'])->name('admin.user.feedback.details');
+Route::get('userfeedback/view/{id}',[UserfeedbackController::class,'userfeedbackDetails'])->name('admin.user.feedback.details');
 Route::get('userfeedback/edit/{id}',[UserfeedbackController::class,'userfeedbackedit'])->name('admin.user.feedback.edit');
 Route::put('userfeedback/update/{id}',[UserfeedbackController::class,'userfeedbackupdate'])->name('admin.user.feedback.update');
 Route::get('userfeedback/delete/{id}',[UserfeedbackController::class,'userfeedbackdelete'])->name('admin.user.feedback.delete');
@@ -164,9 +171,12 @@ Route::post('/user/website/problem/show',[ProblemshowController::class,'doshowpr
 // User Profile
 
 Route::get('/user/profile',[UserprofileController::class,'userprofilew'])->name('website.user.profile');
-Route::post('/user/store/profile',[UserprofileController::class,'userprofilewstore'])->name('user.website.profile.store');
+Route::put('/user/store/profile{id}',[UserprofileController::class,'userprofilewstore'])->name('user.website.profile.store');
 
 Route::get('/user/probleminfo/view/{id}',[UserprofileController::class,'showproblemview'])->name('website.problem.info.details');
+
+
+
 
 
 // Website User Feedback

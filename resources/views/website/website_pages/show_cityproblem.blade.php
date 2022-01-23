@@ -1,6 +1,10 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
@@ -27,7 +31,7 @@
 <form action="{{route('admin.problem.list')}}" method='post'>
     @csrf
 
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<label>NID Number</label>
 		<input name="nid_number" type="number" class="form-control" placeholder="">
 	</div>
@@ -40,7 +44,7 @@
     <div class="form-group">
 		<label>Phone Number</label>
 		<input name="phone_number" type="number" class="form-control" placeholder="">
-	</div>
+	</div> -->
     <div class="form-group">
 		<label>Area</label>
 		<input name="area" type="text" class="form-control" placeholder="">
@@ -59,14 +63,14 @@
   <br><br>
 		<!-- <input name="area" type="text" class="form-control" placeholder=""> -->
 	</div>
-    <div class="form-group">
+    <!-- <div class="form-group">
 		<label>Descriptopn of Problem</label>
         <br>
 		<textarea name="description_problem" type="text" class="form-control" placeholder=""> </textarea>
-	</div>
+	</div> -->
     <div class="form-group">
 		<label>Date</label>
-		<input name="date" type="date" class="form-control" placeholder="">
+		<input name="date" type="text"  id="datepicker" class="form-control datepicker" placeholder="" autocomplete="off">
 	</div>
 
    
@@ -98,3 +102,11 @@ and product landing pages</p>   <br>
 </div>
 <br><br>
 </article> -->
+
+<script type="text/javascript">
+	$('.datepicker').datepicker({
+		minDate:0,
+		maxDate: 0,
+		dateFormat: 'yy-mm-dd'
+	});
+</script>

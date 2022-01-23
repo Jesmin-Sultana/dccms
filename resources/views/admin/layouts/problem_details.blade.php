@@ -16,7 +16,9 @@
       <p>Phone Number: {{$problem->phone_number}}</p>
       <p> Area: {{$problem->area}}</p>
       <p> Problem Type: {{$problem->problemtype->problem_type}}</p>
-      <p> Description of Problem: {{$problem->description_problem}}</p>
+
+      <!-- <p> Description of Problem: {{$problem->description_problem}}</p> -->
+
       <p> Date: {{$problem->date}}</p>
     </div>
 </div>

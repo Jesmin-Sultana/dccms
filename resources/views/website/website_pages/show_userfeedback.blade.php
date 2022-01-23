@@ -28,7 +28,7 @@
 	@csrf
     
 
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<label>User Name</label>
 		<input name="user_name" type="text" class="form-control" placeholder="">
 	</div>
@@ -36,7 +36,7 @@
 	<div class="form-group">
 		<label>User NID</label>
 		<input name="user_nid" type="number" class="form-control" placeholder="">
-	</div>
+	</div> -->
 
     <!-- <div class="form-group">
 		<label>Phone Number</label>

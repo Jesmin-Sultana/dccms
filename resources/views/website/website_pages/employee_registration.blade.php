@@ -16,7 +16,7 @@
 <div class="card">
 <header class="card-header">
 	<!-- <a href="" class="float-right btn btn-outline-primary mt-1">Log In</a> -->
-	<h4 class="card-title mt-2">Sign Up</h4>
+	<h4 class="card-title mt-2">For Employee Sign Up</h4>
 </header>
 
 
@@ -26,19 +26,25 @@
     @csrf
 
     <input type="hidden" value="employee" name="employee_role">
-	 <div class="form-row">
+
+
+	 <!-- <div class="form-row">
 		<div class="col form-group">
 			<label>First name </label>   
 		  	<input name="first_name" type="text" class="form-control" placeholder="">
-		</div> 
+		</div>  -->
 			  <!-- form-group end.//  -->
-		<div class="col form-group">
+		<!-- <div class="col form-group">
 			<label>Last name</label>
 		  	<input name="last_name" type="text" class="form-control" placeholder=" ">
-		 </div> 
+		 </div>  -->
 		 <!-- form-group end.//  -->
-	 </div> 
+	 <!-- </div>  -->
 	<!-- form-row end.// --> 
+	<div class="form-group">
+		<label>Name</label>
+		<input name="name" type="text" class="form-control" placeholder="">
+	</div>
 
 	<div class="form-group">
 		<label>NID Number</label>

@@ -7,7 +7,7 @@
     </form>
     <div id="divToPrint" style="margin-left:230px;">
 
-    <h1>User Feedback Details</h1>
+    <h1>Employee Feedback Details</h1>
 
     <div style="margin-left:98px;">
 

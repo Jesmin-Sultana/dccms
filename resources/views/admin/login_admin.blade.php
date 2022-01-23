@@ -75,7 +75,7 @@
     <!-- <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                           -->
 </form>
 </article> <!-- card-body end .// -->
-<div class="border-top card-body text-center">Have an account? <a href="">Sign Up</a></div>
+<!-- <div class="border-top card-body text-center">Have an account? <a href="">Sign Up</a></div> -->
 </div> <!-- card.// -->
 </div> <!-- col.//-->
 

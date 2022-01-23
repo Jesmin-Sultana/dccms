@@ -18,7 +18,7 @@ class CreateEmployeesTable extends Migration
             
             $table->string('employee_name');
 
-            $table->integer('nid_number');
+            $table->bigInteger('nid_number');
             $table->string('email')->unique();
 
             $table->integer('phone_number');

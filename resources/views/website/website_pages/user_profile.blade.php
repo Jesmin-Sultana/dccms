@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>My Account</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
@@ -93,7 +93,8 @@ color: #000000;
 			<div class="card-body">
 
 			<h3><a class="h3 mb-4 page-title" style="color:black" href="{{route('website.home')}}">Back to Home</a></h3>
-			<form action="{{route('user.website.profile.store')}}" method='post'>
+			<form action="{{route('user.website.profile.store',auth()->user()->id)}}" method='post'>
+				@method('PUT')
 				@csrf
 				<div class="row gutters">
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -223,12 +224,14 @@ color: #000000;
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 						<div class="text-right">
 							<!-- <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button> -->
-							<button type="submit" id="submit" name="submit" class="btn btn-primary">Submit</button>
+							<!-- <button type="submit" id="submit" name="submit" class="btn btn-primary">Submit</button> -->
+							<button  type="submit" class="btn btn-danger">Update profile</button>
+
 						</div>
 					</div>
 				</div>
 				</form>
-<br>
+<br><br>
 <h1>Problem List</h1>
 				<table class="table">
   <thead>
@@ -239,7 +242,7 @@ color: #000000;
       <th scope="col">Phone Number</th>
       <th scope="col">Area</th>
       <th scope="col">Problem Type</th>
-      <th scope="col">Description of Problem</th>
+      <!-- <th scope="col">Description of Problem</th> -->
       <th scope="col">Date</th> 
       <th scope="col">Action</th> 
     </tr>
@@ -254,7 +257,7 @@ color: #000000;
 
       <td>{{optional($data->problemtype)->problem_type}}</td>
 
-      <td>{{$data->description_problem}}</td>
+      <!-- <td>{{$data->description_problem}}</td> -->
       <td>{{$data->date}}</td>
 
       <td>

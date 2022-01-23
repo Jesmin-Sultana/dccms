@@ -64,7 +64,7 @@
 
 
       <td>
-      <a class="btn btn-success" href="{{route('admin.employee.details',$data->nid_number)}}">View</a>
+      <a class="btn btn-success" href="{{route('admin.employee.details',$data->id)}}">View</a>
 
       </td>
       <td>

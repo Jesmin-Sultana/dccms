@@ -16,8 +16,8 @@ class UserController extends Controller
 
     public function userstore(){
         Usertable::create([
-            'first_name'=>$request->first_name,
-            'last_name'=>$request->last_name,
+            'name'=>$request->name,
+            // 'last_name'=>$request->last_name,
             'nid_number'=>$request->nid_number,
             'email'=>$request->email,
             'phone_number'=>$request->phone_number,
@@ -32,6 +32,7 @@ class UserController extends Controller
         return redirect()->route('admin.user');
     }
 
+    
     
 
 

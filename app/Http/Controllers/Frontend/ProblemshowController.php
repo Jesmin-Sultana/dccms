@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Problem;
+use App\Models\User;
+
 use App\Models\Typeproblem;
 
 use Illuminate\Http\Request;
@@ -11,6 +13,10 @@ use Illuminate\Http\Request;
 class ProblemshowController extends Controller
 {
     public function websiteproblem(){
+
+// dd($problem);
+        $problem=User::all();
+
         $problem = Problem::all();
         $problem_type = Typeproblem::all();
 // dd($problem_type);
@@ -18,16 +24,16 @@ class ProblemshowController extends Controller
     }
 
     public function doshowproblem(Request $request){
-        
+        //dd($request->all());
         problem::create([
-            'nid_number'=>$request->nid_number,
-            'name'=>$request->name,
-            'phone_number'=>$request->phone_number,
+            'nid_number'=>auth()->user()->nid_number,
+            'name'=>auth()->user()->name,
+            'phone_number'=>auth()->user()->phone_number,
             'area'=>$request->area,
             'problem_type'=>$request->problem_type,
-            'description_problem'=>$request->description_problem,
+            // 'description_problem'=>$request->description_problem,
             'date'=>$request->date,
         ]);
-        return redirect()->back()->with('msg','Thank You For Your Feedback');
+        return redirect()->back()->with('msg','Thank You For submitting Your Objection');
     }
 }

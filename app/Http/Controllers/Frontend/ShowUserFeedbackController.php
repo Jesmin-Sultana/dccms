@@ -4,12 +4,18 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Userfeedback;
+use App\Models\User;
+
 
 use Illuminate\Http\Request;
 
 class ShowUserFeedbackController extends Controller
 {
     public function userfeedbackw(){
+        $problem=User::all();
+
+
+
         $userfeedback = Userfeedback::all();
 
 
@@ -25,8 +31,9 @@ class ShowUserFeedbackController extends Controller
             $file->storeAs('/uploads',$filename);
         }
         userfeedback::create([
-            'user_name'=>$request->user_name,
-            'user_nid'=>$request->user_nid,
+            'name'=>auth()->user()->name,
+            'nid_number'=>auth()->user()->nid_number,
+            'phone_number'=>auth()->user()->phone_number,
             'problem_type'=>$request->problem_type,
             'area'=>$request->area,
             'feedback'=>$request->feedback,

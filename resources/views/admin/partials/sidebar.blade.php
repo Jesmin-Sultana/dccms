@@ -47,6 +47,11 @@
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
                                 Feedback of Completion Task
                             </a>
+
+                            <a class="nav-link" href="{{route('admin.report.list')}}">
+                                <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
+                               Report 
+                            </a>
                             
                             
                             <a class="nav-link" href="{{route('admin.tax')}}">
@@ -55,10 +60,7 @@
                             </a>
                            
                             
-                            <a class="nav-link" href="{{route('admin.report.list')}}">
-                                <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
-                               Report 
-                            </a>
+                           
 
                             @endif
                            <!-- <div class="sb-sidenav-menu-heading">Interface</div>

@@ -17,7 +17,7 @@ class CreateUsertablesTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->integer('nid_number');
+            $table->bigInteger('nid_number');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('phone_number');

@@ -67,18 +67,18 @@ class EmployeeController extends Controller
        
 
 
-    public function employeeDetails($nid_number)
+    public function employeeDetails($id)
     {
 
-        $employee=Employee::where('nid_number',$nid_number)->first();
+        $employee=Employee::where('id',$id)->first();
     
         return view('admin.layouts.employee_details',compact('employee'));
     }
 
-    public function employeeEdit($nid_number)
+    public function employeeEdit($id)
     {
 
-        $employee=Employee::find($nid_number);
+        $employee=Employee::find($id);
 //        $product=Product::where('user_id',$id)->first();
 
 //        dd($all_categories);

@@ -15,8 +15,9 @@ class CreateUserfeedbacksTable extends Migration
     {
         Schema::create('userfeedbacks', function (Blueprint $table) {
             $table->id();
-            $table->string('user_name');
-            $table->integer('user_nid');
+            $table->string('name');
+            $table->bigInteger('nid_number');
+            $table->integer('phone_number');
             $table->string('problem_type');
             $table->string('area');
             $table->string('feedback');

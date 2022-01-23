@@ -16,9 +16,9 @@ class UsersTableSeeder extends Seeder
     {
         User::create(
             [
-                'first_name'=>'admin',
-                'last_name'=>'panel',
-                'nid_number'=>'12345',
+                'name'=>'admin',
+                // 'last_name'=>'panel',
+                'nid_number'=>'2233456789',
                 'email'=>'admin.panel@gmail.com',
                 'phone_number'=>'0191567',
                 'gender'=>'female',

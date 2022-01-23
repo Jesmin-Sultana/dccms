@@ -17,7 +17,7 @@
 <p>Age: {{$employee->age}}</p>
 <p>Gender: {{$employee->gender}}</p>
 <p>Working Field: {{$employee->workingfield->problem_type}}</p>
-
+</div>
 
 
 @endsection

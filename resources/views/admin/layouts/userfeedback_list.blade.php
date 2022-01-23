@@ -21,8 +21,9 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">User Name</th>
-      <th scope="col">User NID</th>
+      <th scope="col">Name</th>
+      <th scope="col">NID Number</th>
+      <th scope="col">Phone Number</th>
       <th scope="col">Problem Type</th>
       <th scope="col">Area</th>
       <th scope="col">Feedback</th>
@@ -36,14 +37,15 @@
       @foreach($userfeedback as $data)
 
     <tr>
-      <th scope="row">{{$data->user_name}}</th>
-      <td>{{$data->user_nid}}</td>
+      <th scope="row">{{$data->name}}</th>
+      <td>{{$data->nid_number}}</td>
+      <td>{{$data->phone_number}}</td>
       <td>{{$data->problem_type}}</td>
       <td>{{$data->area}}</td>
       <td>{{$data->feedback}}</td>
       <td><img src = "{{url('/uploads/'.$data->image)}}" alt="userfeedback image" width="100px"></td>
       <td>
-        <a class="btn btn-info" href="{{route('admin.user.feedback.details',$data->user_nid)}}">View</a>
+        <a class="btn btn-info" href="{{route('admin.user.feedback.details',$data->id)}}">View</a>
       </td>
       <td>
       <a class="btn btn-danger" href="{{route('admin.user.feedback.edit',$data->id)}}">Edit</a>

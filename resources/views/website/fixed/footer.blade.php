@@ -1,5 +1,6 @@
-<div id="tooplate_footer">
+<!-- <div id="tooplate_footer"> -->
 
-    Copyright © 2021 <a href="#">Jesmin Sultana</a>
+    <!-- Copyright © 2021 <a href="#">Jesmin Sultana</a> -->
 
-</div> <!-- end of tooplate_footer -->
+<!-- </div>  -->
+<!-- end of tooplate_footer -->

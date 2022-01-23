@@ -31,19 +31,19 @@ class ProblemController extends Controller
             'phone_number'=>$request->phone_number,
             'area'=>$request->area,
             'problem_type'=>$request->problem_type,
-            'description_problem'=>$request->description_problem,
+            // 'description_problem'=>$request->description_problem,
             'date'=>$request->date,
         ]);
         return redirect()->back();
     }
 
-    public function probleminfoDetails($nid_number)
+    public function probleminfoDetails($id)
     {
 
         
       
 
-      $problem=Problem::where('nid_number',$nid_number)->first();
+      $problem=Problem::where('id',$id)->first();
         // dd($problem);
       $employee=Employee::where('working_field',$problem->problem_type)->get();
         // dd($employee);
@@ -52,10 +52,10 @@ class ProblemController extends Controller
         return view('admin.layouts.problem_details',compact('problem','employee'));
     }
 
-    public function problemEdit($nid_number)
+    public function problemEdit($id)
     {
 
-        $problem=Problem::find($nid_number);
+        $problem=Problem::find($id);
 //        $product=Product::where('user_id',$id)->first();
 
 //        dd($all_categories);
@@ -74,7 +74,7 @@ class ProblemController extends Controller
             'phone_number'=>$request->phone_number,
             'area'=>$request->area,
             'problem_type'=>$request->problem_type,
-            'description_problem'=>$request->description_problem,
+            // 'description_problem'=>$request->description_problem,
             'date'=>$request->date,
         ]);
         return redirect()->route('admin.problems.list')->with('success','Objection Info Updated Successfully.');

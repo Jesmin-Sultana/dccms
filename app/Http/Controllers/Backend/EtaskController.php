@@ -69,10 +69,10 @@ class EtaskController extends Controller
         return view('admin.layouts.etask_details',compact('etask'));
     }
 
-    public function etaskEdit($employee_nid)
+    public function etaskEdit($id)
     {
 
-        $etask=Etask::find($employee_nid);
+        $etask=Etask::find($id);
 //        $product=Product::where('user_id',$id)->first();
 
 //        dd($all_categories);

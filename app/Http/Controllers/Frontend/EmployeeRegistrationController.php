@@ -17,8 +17,8 @@ class EmployeeRegistrationController extends Controller
     public function doemployeeregistration(Request $request){
 
             User::create([
-                'first_name'=>$request->first_name,
-                'last_name'=>$request->last_name,
+                'name'=>$request->name,
+                // 'last_name'=>$request->last_name,
                 'nid_number'=>$request->nid_number,
                 'email'=>$request->email,
                 'phone_number'=>$request->phone_number,

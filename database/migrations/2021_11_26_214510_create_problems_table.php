@@ -15,12 +15,13 @@ class CreateProblemsTable extends Migration
     {
         Schema::create('problems', function (Blueprint $table) {
             $table->id();
-            $table->integer('nid_number');
+            $table->bigInteger('nid_number');
             $table->string('name');
             $table->integer('phone_number');
             $table->string('area');
             $table->string('problem_type');
-            $table->text('description_problem');
+
+            // $table->text('description_problem');
             $table->date('date');
             $table->string('employee_name')->nullable();
 

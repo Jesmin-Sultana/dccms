@@ -2,11 +2,11 @@
 
 
 @section('main')
-
 <form class="print_order">
         <input class="btn btn-danger" type="button" onClick="PrintDiv();" value="Print">
     </form>
     <div id="divToPrint">
+        <center>
     <h1>Employee Details</h1>
 
    
@@ -14,11 +14,10 @@
 <p> NID Number: {{$employee->nid_number}}</p>
 <p>Address: {{$employee->address}}</p>
 <p>Phone Number : {{$employee->phone_number}}</p>
-<p>Age: {{$employee->age}}</p>
 <p>Gender: {{$employee->gender}}</p>
 <p>Working Field: {{$employee->workingfield->problem_type}}</p>
 </div>
-
+</center>
 
 @endsection
 

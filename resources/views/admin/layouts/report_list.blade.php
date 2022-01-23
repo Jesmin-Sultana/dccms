@@ -5,7 +5,7 @@
 
 
 
-<!-- <h1>Report</h1> -->
+<!--Report-->
 <a href="{{route('report.form')}}" ></a>
 
 <div>

@@ -25,4 +25,21 @@ class TypeproblemController extends Controller
         ]);
         return redirect()->route('admin.problem.type');
     }
+
+
+    public function typeproblemdetails($id)
+    {
+
+        $typeproblems = Typeproblem::where('id',$id)->first();
+    
+        return view('admin.layouts.typeproblem_details',compact('typeproblems'));
+    }
+
+    public function typeproblemdelete($id)
+    {
+
+        $cc = Typeproblem::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','Problems Type  Deleted.');
+    }
 }

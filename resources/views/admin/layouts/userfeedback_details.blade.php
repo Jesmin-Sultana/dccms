@@ -6,17 +6,20 @@
         <input class="btn btn-warning" type="button" onClick="PrintDiv();" value="Print">
     </form>
     <div id="divToPrint">
+        <center>
     <h1>User Feedback Details</h1>
 
     <p>
     <img src = " {{url('/uploads/'.$userfeedback->image)}}" alt="userfeedback image" width="100px">
     </p>
-<p>User Name: {{$userfeedback->user_name}}</p>
-<p>User NID:  {{$userfeedback->user_nid}}</p>
+<p> Name: {{$userfeedback->name}}</p>
+<p>NID :  {{$userfeedback->nid_number}}</p>
+<p>Phone Number:  {{$userfeedback->phone_number}}</p>
+
 <p>User Problem Type: {{$userfeedback->problem_type}}</p>
 <p>User Feedback : {{$userfeedback->feedback}}</p>
 
-
+</center>
    
 
 @endsection

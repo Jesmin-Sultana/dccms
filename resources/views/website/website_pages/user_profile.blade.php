@@ -77,7 +77,7 @@ color: #000000;
 						<div class="user-avatar">
 							<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
 						</div>
-						<h5 class="user-name">{{auth()->user()->first_name}} {{auth()->user()->last_name}}</h5>
+						<h5 class="user-name">{{auth()->user()->name</h5>
 						<h6 class="user-email">{{auth()->user()->email}}</h6>
 					</div>
 					<div class="about">

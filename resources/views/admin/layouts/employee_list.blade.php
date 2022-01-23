@@ -3,7 +3,8 @@
 @section('main')
 
 <h1>Employee List</h1>
-<a href="{{route('admin.employee.form')}}" class="btn btn-warning">Add Employee</a>
+  <a href="{{route('admin.employee.form')}}" class="btn btn-warning">Add Employee</a>
+
 
 <!-- search -->
 <form action="{{route('admin.employee')}}">
@@ -65,16 +66,15 @@
 
       <td>
       <a class="btn btn-success" href="{{route('admin.employee.details',$data->id)}}">View</a>
-
-      </td>
-      <td>
+</td>
+<td>
       <a class="btn btn-danger" href="{{route('admin.employee.edit',$data->id)}}">Edit</a>
-
-      </td>
-      <td>
+</td>
+<td>
       <a class="btn btn-warning" href="{{route('admin.employee.details.delete',$data->id)}}">Delete</a>
 
       </td>
+
     </tr>
     @endforeach
     

@@ -139,6 +139,10 @@ Route::get('/assign/employee/list',[AssignemployeeController::class,'assignform'
 Route::get('/problem/type/list',[TypeproblemController::class,'typeform'])->name('admin.problem.type');
 Route::get('/problem/type/form',[TypeproblemController::class,'typeprob'])->name('admin.typeproblem.form');
 Route::post('/problem/type/store',[TypeproblemController::class, 'problemstore'])->name('admin.type.problem.store');
+Route::get('/problem/type/form',[TypeproblemController::class,'typeprob'])->name('admin.typeproblem.form');
+Route::get('/problem/type/view/{id}',[TypeproblemController::class,'typeproblemdetails'])->name('admin.problem.type.details');
+Route::get('/problem/type/delete/{id}',[TypeproblemController::class,'typeproblemdelete'])->name('admin.problem.type.delete');
+
 
 
 });

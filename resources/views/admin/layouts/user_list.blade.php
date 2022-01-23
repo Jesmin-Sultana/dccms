@@ -1,8 +1,9 @@
 @extends('admin.master')
 
 @section('main')
+<center>
 <h1>User List</h1>
-
+</center>
 
 
 <form class="print_order">

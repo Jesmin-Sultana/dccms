@@ -77,17 +77,20 @@ class EmployeeController extends Controller
 
     public function employeeEdit($id)
     {
+        $working_field = Typeproblem::all();
+
 
         $employee=Employee::find($id);
 //        $product=Product::where('user_id',$id)->first();
 
 //        dd($all_categories);
-        return view('admin.layouts.employee_edit',compact('employee'));
+        return view('admin.layouts.employee_edit',compact('employee','working_field'));
 
     }
 
     public function employeeupdate(Request $request,$id)
     {
+
 
         $employee=Employee::find($id);
         $employee->update([
@@ -95,7 +98,6 @@ class EmployeeController extends Controller
             'nid_number'=>$request->nid_number,
             'address'=>$request->address,
             'phone_number'=>$request->phone_number,
-            'age'=>$request->age,
             'gender'=>$request->gender,
             'working_field'=>$request->working_field,
 

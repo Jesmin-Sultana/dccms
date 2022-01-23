@@ -56,12 +56,8 @@
       <td>
       <a class="btn btn-dark" href="{{route('admin.problem.info.details',$data->id)}}">View</a>
 
-      </td>
-      <td>
-      <a class="btn btn-warning" href="{{route('admin.problem.edit',$data->id)}}">Edit</a>
+      <a  href="#"></a>
 
-      </td>
-      <td>
       <a class="btn btn-success" href="{{route('admin.problem.info.delete',$data->id)}}">Delete</a>
 
 

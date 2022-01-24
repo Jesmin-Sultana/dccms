@@ -1,7 +1,7 @@
 
 
 <div id="tooplate_header_wrapper">
-<div id="tooplate_header" style="background-image: url('/images/tooplate_header.jpg'); width: 100%;">
+<div id="tooplate_header" style="background-image: url('/bpic/citypic.jpg'); width: 100%; background-repeat: no-repeat; height: 366px; background-size: cover;">
 
         <div id="tooplate_menu">
             <ul style="display: flex; justify-content: space-between; padding-left: 57px;">

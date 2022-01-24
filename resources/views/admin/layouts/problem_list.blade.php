@@ -42,7 +42,9 @@
       @foreach($problem as $data )
     <tr>
       <th scope="row">{{$data->nid_number}}</th>
+      <!-- change -->
       <td>{{$data->name}}</td>
+
       <td>{{$data->phone_number}}</td>
       <td>{{$data->area}}</td>
 

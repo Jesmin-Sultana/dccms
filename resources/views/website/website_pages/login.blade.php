@@ -44,10 +44,10 @@
 		<input name="email" type="email" class="form-control" placeholder="">
 	</div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
 		<label>Phone Number</label>
 		<input name="phone_number" type="number" class="form-control" placeholder="">
-	</div>
+	</div> -->
 
     <div class="form-group">
 		<label>password</label>

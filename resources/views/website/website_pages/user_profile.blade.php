@@ -77,7 +77,7 @@ color: #000000;
 						<div class="user-avatar">
 							<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
 						</div>
-						<h5 class="user-name">{{auth()->user()->name</h5>
+						<h5 class="user-name">{{auth()->user()->name}}</h5>
 						<h6 class="user-email">{{auth()->user()->email}}</h6>
 					</div>
 					<div class="about">
@@ -233,6 +233,45 @@ color: #000000;
 				</form>
 <br><br>
 <h1>Problem List</h1>
+@if(auth()->user()->role == "employee")
+<table class="table">
+  <thead>
+    <tr>
+	<th scope="col">NID Number</th>
+	
+      <th scope="col">Name</th> <br>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Area</th>
+      <th scope="col">Problem Type</th>
+      <!-- <th scope="col">Description of Problem</th> -->
+      <th scope="col">Date</th> 
+      <th scope="col">Action</th> 
+    </tr>
+  </thead>
+  <tbody>
+      @foreach($problem as $data )
+    <tr>
+      <th scope="row">{{$data->nid_number}}</th>
+	  <!-- change -->
+      <td>{{$data->name}}</td>
+
+      <td>{{$data->phone_number}}</td>
+      <td>{{$data->area}}</td>
+
+      <td>{{optional($data->problemtype)->problem_type}}</td>
+
+      <!-- <td>{{$data->description_problem}}</td> -->
+      <td>{{$data->date}}</td>
+
+      <td>
+      <a class="btn btn-dark" href="{{route('website.problem.info.details',$data->id)}}" class="btn btn-danger">View</a>
+      </td>
+      
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+@else
 				<table class="table">
   <thead>
     <tr>
@@ -251,7 +290,9 @@ color: #000000;
       @foreach($problem as $data )
     <tr>
       <th scope="row">{{$data->nid_number}}</th>
+	  <!-- change -->
       <td>{{$data->name}}</td>
+
       <td>{{$data->phone_number}}</td>
       <td>{{$data->area}}</td>
 
@@ -268,7 +309,7 @@ color: #000000;
     @endforeach
   </tbody>
 </table>
-
+@endif
 
 				
 			</div>

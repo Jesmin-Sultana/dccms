@@ -26,8 +26,11 @@ class ProblemController extends Controller
     }
     public function store(Request $request){
         problem::create([
-            'nid_number'=>$request->nid_number,
-            'name'=>$request->name,
+            // change
+            'nid_number'=>auth()->user()->nid_number,
+            // change
+            'name'=>auth()->user()->name,
+
             'phone_number'=>$request->phone_number,
             'area'=>$request->area,
             'problem_type'=>$request->problem_type,
@@ -45,7 +48,9 @@ class ProblemController extends Controller
 
       $problem=Problem::where('id',$id)->first();
         // dd($problem);
-      $employee=Employee::where('working_field',$problem->problem_type)->get();
+      $employee=Employee::where('working_field',$problem->problem_type)
+      ->where('status','available')
+      ->get();
         // dd($employee);
 
     

@@ -139,7 +139,7 @@ em { color: #cf560d }
 	height: 30px;
 	padding: 10px 0 0 0;
 	font-size: 14px;
-	color: #d2902c;	
+	color: #fafafa;	
 	text-align: center;
 	text-decoration: none;
 	font-weight: 400;
@@ -148,7 +148,7 @@ em { color: #cf560d }
 }
 
 #tooplate_menu ul li a:hover, #tooplate_menu ul .current {
-	color: #ffa400;
+	color: white;
 	background: url(images/tooplate_menu_hover.png) bottom center no-repeat;
 }
 /* end of menu */

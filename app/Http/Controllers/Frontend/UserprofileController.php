@@ -21,7 +21,14 @@ class UserprofileController extends Controller
         // dd($user_id);
         // $employee = Employee::where('id',$user_id)->get();
         // dd($employee);
-        $problem = Problem::all();
+        if (auth()->user()->role=="employee") {
+            $problem = Problem::where('employee_name',auth()->user()->id)->get();
+        }
+        else {
+        $problem = Problem::where('nid_number',auth()->user()->nid_number)->get();
+        }
+
+        // particular user end
 
         return view('website.website_pages.user_profile',compact('problem'));
     }

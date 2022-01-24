@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 class ShowUserFeedbackController extends Controller
 {
     public function userfeedbackw(){
+
+        
         $problem=User::all();
 
 

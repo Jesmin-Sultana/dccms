@@ -62,15 +62,15 @@
 	</div>
 	<div class="form-group">
 		<label>Area</label>
-		<input name="area" type="text" class="form-control" placeholder="">
+		<input required name="area" type="text" class="form-control" placeholder="">
 	</div>
     <div class="form-group">
 		<label>Feedback</label>
-		<input name="feedback" type="text" class="form-control" placeholder="">
+		<input required name="feedback" type="text" class="form-control" placeholder="">
 	</div>
     <div class="form-group">
 		<label>Image</label>
-		<input name="image" type="file" class="form-control" placeholder="">
+		<input required name="image" type="file" class="form-control" placeholder="">
 	</div>
 
    

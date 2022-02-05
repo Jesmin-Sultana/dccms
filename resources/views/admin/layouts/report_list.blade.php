@@ -4,7 +4,6 @@
 
 
 
-
 <!--Report-->
 <a href="{{route('report.form')}}" ></a>
 
@@ -26,7 +25,12 @@
         <input class="btn btn-danger" type="button" onClick="PrintDiv();" value="Print">
     </form>
 <div id="divToPrint">
-    
+@if ($errors->any())
+     @foreach ($errors->all() as $error)
+         <p class="alert alert-danger">{{$error}}</p>
+     @endforeach
+ @endif
+
 <center>
   <h1>Report</h1>
 </center>

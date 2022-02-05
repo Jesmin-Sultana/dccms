@@ -26,6 +26,8 @@
     <th scope="col">Country</th>
     <th scope="col">Address</th>
     <th scope="col">Role</th>
+    <th scope="col">Action</th>
+
 
 
 
@@ -45,6 +47,10 @@
       <td>{{$data->country}}</td>
       <td>{{$data->address}}</td>
       <td>{{$data->role}}</td>
+      <td>
+      <a class="btn btn-warning" href="{{route('admin.user.list.delete',$data->id)}}">Delete</a>
+
+      </td>
 
       
 

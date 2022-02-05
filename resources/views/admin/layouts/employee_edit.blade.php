@@ -14,14 +14,13 @@
     <input name="nid_number" value="{{$employee->nid_number}}" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Address</label>
-    <input name="address" value="{{$employee->address}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Email</label>
+    <input name="address" value="{{$employee->email}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Phone Number</label>
     <input name="phone_number" value="{{$employee->phone_number}}" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Gender</label>
     <!-- <input name="gender" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
@@ -31,6 +30,21 @@
     <option value="other">Other</option>
   </select>
   </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your City</label>
+    <input name="address" value="{{$employee->city}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Country</label>
+    <input name="address" value="{{$employee->country}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Address</label>
+    <input name="address" value="{{$employee->address}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  
+
+  
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Working Field</label>
     <!-- <input name="working_field" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->

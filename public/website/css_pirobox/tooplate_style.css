@@ -148,7 +148,7 @@ em { color: #cf560d }
 }
 
 #tooplate_menu ul li a:hover, #tooplate_menu ul .current {
-	color: white;
+	color: maroon;
 	background: url(images/tooplate_menu_hover.png) bottom center no-repeat;
 }
 /* end of menu */

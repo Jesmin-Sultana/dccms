@@ -5,21 +5,21 @@
     @csrf
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Employee Name</label>
-    <input name="employee_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="employee_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your NID Number</label>
-    <input name="nid_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="nid_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Email</label>
-    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Phone Number</label>
-    <input name="phone_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="phone_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Gender</label>
@@ -32,16 +32,16 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter City</label>
-    <input name="city" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="city" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Country</label>
-    <input name="country" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="country" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Address</label>
-    <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <div class="mb-3">

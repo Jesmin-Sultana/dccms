@@ -16,7 +16,7 @@
 <div class="card">
 <header class="card-header">
 	<!-- <a href="" class="float-right btn btn-outline-primary mt-1">Log In</a> -->
-	<h4 class="card-title mt-2">For User Sign Up</h4>
+	<center><h4 class="card-title mt-2">For User Sign Up</h4></center>
 </header>
 
 
@@ -40,22 +40,22 @@
 
 	<div class="form-group">
 		<label>Name</label>
-		<input name="name" type="text" class="form-control" placeholder="">
+		<input required name="name" type="text" class="form-control" placeholder="">
 	</div>
 
 	<div class="form-group">
 		<label>NID Number</label>
-		<input name="nid_number" type="number" class="form-control" placeholder="">
+		<input required name="nid_number" type="number" class="form-control" placeholder="">
 	</div> <!-- form-group end.// -->
 
 	<div class="form-group">
 		<label>Email</label>
-		<input name="email" type="email" class="form-control" placeholder="">
+		<input required name="email" type="email" class="form-control" placeholder="">
 	</div>
 
     <div class="form-group">
 		<label>Phone Number</label>
-		<input name="phone_number" type="number" class="form-control" placeholder="">
+		<input required name="phone_number" type="number" class="form-control" placeholder="">
 	</div>
 
 
@@ -74,7 +74,7 @@
 	 <div class="form-row">
 		<div class="form-group col-md-6">
 		  <label>City</label>
-		  <input name="city" type="text" class="form-control">
+		  <input required name="city" type="text" class="form-control">
 		</div> 
 		<!-- form-group end.//  -->
 		<div class="form-group col-md-6">
@@ -99,7 +99,7 @@
    
     <div class="form-group">
 		<label>Address</label>
-		<input name="address" type="text" class="form-control" placeholder="">
+		<input required name="address" type="text" class="form-control" placeholder="">
 	</div>
 
 
@@ -111,7 +111,7 @@
 	</div> form-group end.//   -->
     <div class="form-group">
 		<label>password</label>
-	    <input  class="form-control" name="password" type="password">
+	    <input required  class="form-control" name="password" type="password">
 	</div>
 
 	

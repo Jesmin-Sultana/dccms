@@ -88,7 +88,7 @@
                     <div class="icon">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('admin.employee')}}" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
@@ -101,7 +101,7 @@
                     <div class="icon">
                         <i class="fa fa-money" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('admin.problem.type')}}" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
@@ -113,7 +113,7 @@
                     <div class="icon">
                         <i class="fa fa-user-plus" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('admin.problems.list')}}" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
@@ -127,7 +127,7 @@
                     <div class="icon">
                         <i class="fa fa-user-plus" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('admin.user.feedback')}}" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
@@ -140,7 +140,7 @@
                     <div class="icon">
                         <i class="fa fa-user-plus" aria-hidden="true"></i>
                     </div>
-                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{route('admin.etask.list')}}" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>

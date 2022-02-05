@@ -30,7 +30,7 @@
 <div class="card">
 <header class="card-header">
 	<!-- <a href="" class="float-right btn btn-outline-primary mt-1">Log In</a> -->
-	<h4 class="card-title mt-2">Admin Login Panel</h4>
+	<center><h4 class="card-title mt-2">Admin Login Panel</h4></center>
 </header>
 
 

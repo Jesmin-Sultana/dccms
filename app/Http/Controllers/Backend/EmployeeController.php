@@ -39,6 +39,21 @@ class EmployeeController extends Controller
    
 
     public function add(Request $request){
+
+        $request->validate([
+            'employee_name'=>'required',
+            'nid_number'=>'required',
+            'email'=>'required',
+            'phone_number'=>'required',
+            'gender'=>'required',
+            'city'=>'required',
+            'country'=>'required',
+            'address'=>'required',
+
+
+            'working_field'=>'required',
+        
+        ]);
        
         $employee = employee::create([
 

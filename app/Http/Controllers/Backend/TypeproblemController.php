@@ -18,6 +18,14 @@ class TypeproblemController extends Controller
     }
 
     public function problemstore(Request $request){
+
+        $request->validate([
+            'problem_type'=>'required',
+            'description'=>'required',
+             
+        
+        ]);
+
         Typeproblem::create([
             'problem_type'=>$request->problem_type,
             'description'=>$request->description,

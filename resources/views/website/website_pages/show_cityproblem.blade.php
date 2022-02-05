@@ -47,7 +47,7 @@
 	</div> -->
     <div class="form-group">
 		<label>Area</label>
-		<input name="area" type="text" class="form-control" placeholder="">
+		<input required name="area" type="text" class="form-control" placeholder="">
 	</div>
 	<div class="form-group">
 		<label>Problem Type</label>
@@ -70,7 +70,7 @@
 	</div> -->
     <div class="form-group">
 		<label>Date</label>
-		<input name="date" type="text"  id="datepicker" class="form-control datepicker" placeholder="" autocomplete="off">
+		<input required name="date" type="text"  id="datepicker" class="form-control datepicker" placeholder="" autocomplete="off">
 	</div>
 
    

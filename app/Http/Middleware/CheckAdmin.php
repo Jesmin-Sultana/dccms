@@ -17,7 +17,7 @@ class CheckAdmin
     public function handle(Request $request, Closure $next)
     {
 
-        if(auth()->user()->role=='admin'  ||auth()->user()->role=='employee'){
+        if(auth()->user()->role=='admin'){
 
         return $next($request);
     }else
@@ -26,4 +26,6 @@ class CheckAdmin
     }
 
     }
+    // if(auth()->user()->role=='admin'  ||auth()->user()->role=='employee'){
+
 }

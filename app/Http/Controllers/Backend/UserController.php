@@ -32,6 +32,15 @@ class UserController extends Controller
         return redirect()->route('admin.user');
     }
 
+
+    public function userdelete($id)
+    {
+
+        $cc = User::find($id);
+        $cc->delete();
+       return redirect()->back()->with('success','Individual User Deleted.');
+    }
+
     
     
 

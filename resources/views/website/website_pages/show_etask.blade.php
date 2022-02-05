@@ -36,10 +36,15 @@
   </select>
   <br><br>
 	</div>
+
+	<!-- <div class="form-group">
+		<label>NID Number</label>
+		<input name="nid_number" type="number" class="form-control" placeholder="">
+	</div> -->
    
     <div class="form-group">
 		<label>Problem Area</label>
-		<input name="problem_area" type="text" class="form-control" placeholder="">
+		<input required name="problem_area" type="text" class="form-control" placeholder="">
 	</div>
    
 	<div class="form-group">
@@ -58,11 +63,11 @@
 	</div>
     <div class="form-group">
 		<label>Feedback</label>
-		<input name="feedback" type="text" class="form-control" placeholder="">
+		<textarea required name="feedback" type="text" class="form-control" placeholder=""></textarea>
 	</div>
     <div class="form-group">
 		<label>Image</label>
-		<input name="image" type="file" class="form-control" placeholder="">
+		<input required name="image" type="file" class="form-control" placeholder="">
 	</div>
 
    

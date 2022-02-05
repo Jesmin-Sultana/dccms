@@ -18,7 +18,7 @@
                             
                             <a class="nav-link" href="{{route('admin.user')}}">
                                 <div class="sb-nav-link-icon"><i class='fas fa-arrows-alt' style='font-size:24px'></i></div>
-                                User
+                                Users List
                             </a>
                             
                            

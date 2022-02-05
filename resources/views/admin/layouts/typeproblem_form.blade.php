@@ -28,12 +28,12 @@
 @csrf
 	<div class="form-group">
 		<label>Problem Type</label>
-		<input name="problem_type" type="text" class="form-control" placeholder="">
+		<input required name="problem_type" type="text" class="form-control" placeholder="">
 	</div>
 	
 	<div class="form-group">
 		<label>Description</label>
-		<input name="description" type="text" class="form-control" placeholder="">
+		<input required name="description" type="text" class="form-control" placeholder="">
 	</div>
 
     

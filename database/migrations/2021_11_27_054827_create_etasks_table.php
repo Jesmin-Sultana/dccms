@@ -16,6 +16,7 @@ class CreateEtasksTable extends Migration
         Schema::create('etasks', function (Blueprint $table) {
             $table->id();
             $table->string('employee_name');
+            $table->bigInteger('nid_number');
             $table->string('problem_area');
             $table->string('work_type');
             $table->string('feedback');

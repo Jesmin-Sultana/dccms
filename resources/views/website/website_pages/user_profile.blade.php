@@ -102,25 +102,34 @@ color: #000000;
 					</div>
 					
 					
-					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+					<!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="fullName">First Name</label>
 							<input name="first_name" type="text" class="form-control" id="first_name" placeholder="Enter first name">
 							<br><br>
 						</div>
-					</div>
-					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+					</div> -->
+					<!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="eMail">Last Name</label>
 							<input name="last_name" type="text" class="form-control" id="last_name" placeholder="Enter last name">
 							<br><br>
 
 						</div>
-					</div>
+					</div> -->
+
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+						<div class="form-group">
+							<label for="phone">Name</label>
+							<input name="name" value="{{auth()->user()->name}}" type="text" class="form-control" id="nid_number" placeholder="Enter nid number">
+							<br><br>
+
+						</div>
+					 </div>  
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="phone">NID Number</label>
-							<input name="nid_number" type="number" class="form-control" id="nid_number" placeholder="Enter nid number">
+							<input name="nid_number" value="{{auth()->user()->nid_number}}" type="number" class="form-control" id="nid_number" placeholder="Enter nid number">
 							<br><br>
 
 						</div>
@@ -146,7 +155,7 @@ color: #000000;
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="Street">Email</label>
-							<input name="email" type="email" class="form-control" id="email" placeholder="Enter email">
+							<input name="email" value="{{auth()->user()->email}}" type="email" class="form-control" id="email" placeholder="Enter email">
 							<br><br>
 
 						</div>
@@ -154,7 +163,7 @@ color: #000000;
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="Street">Phone Number</label>
-							<input name="phone_number" type="number" class="form-control" id="phone_number" placeholder="Enter phone number">
+							<input name="phone_number" value="{{auth()->user()->phone_number}}" type="number" class="form-control" id="phone_number" placeholder="Enter phone number">
 							<br><br>
 
 						</div>
@@ -162,7 +171,7 @@ color: #000000;
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="ciTy">Gender</label>
-							<input name="gender" type="text" class="form-control" id="gender" placeholder="Enter gender">
+							<input name="gender" value="{{auth()->user()->gender}}" type="text" class="form-control" id="gender" placeholder="Enter gender">
 							<br><br>
 
 						</div>
@@ -170,7 +179,7 @@ color: #000000;
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="sTate">City</label>
-							<input name="city" type="text" class="form-control" id="city" placeholder="Enter city">
+							<input name="city" value="{{auth()->user()->city}}" type="text" class="form-control" id="city" placeholder="Enter city">
 							<br><br>
 
 						</div>
@@ -178,7 +187,7 @@ color: #000000;
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="zIp">Country</label>
-							<input name="country" type="text" class="form-control" id="country" placeholder="country">
+							<input name="country" value="{{auth()->user()->country}}" type="text" class="form-control" id="country" placeholder="country">
 							<br><br>
 
 						</div>
@@ -187,7 +196,7 @@ color: #000000;
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
 							<label for="sTate">Address</label>
-							<input name="address" type="text" class="form-control" id="address" placeholder="Enter address">
+							<input name="address" value="{{auth()->user()->address}}" type="text" class="form-control" id="address" placeholder="Enter address">
 							<br><br>
 
 						</div>

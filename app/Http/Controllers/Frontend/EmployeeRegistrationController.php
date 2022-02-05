@@ -16,6 +16,30 @@ class EmployeeRegistrationController extends Controller
 
     public function doemployeeregistration(Request $request){
 
+        $request->validate([
+            'name'=>'required',
+            'nid_number'=>'required',
+            'email'=>'required',
+            'phone_number'=>'required',
+            'gender'=>'required',
+            'city'=>'required',
+            'country'=>'required',
+            'address'=>'required',
+            'password'=>'required',
+
+
+
+            
+        
+        ]);
+
+
+
+
+
+
+
+
             User::create([
                 'name'=>$request->name,
                 // 'last_name'=>$request->last_name,

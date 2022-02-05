@@ -25,6 +25,19 @@ class ShowUserFeedbackController extends Controller
     }
 
     public function douserfeedback(Request $request){
+
+        $request->validate([
+            'problem_type'=>'required',
+            'area'=>'required',
+            'feedback'=>'required',
+            'image'=>'required',
+             
+        
+        ]);
+
+
+
+
         // dd($request->all());
         $filename = '';
         if($request->hasFile('image')){

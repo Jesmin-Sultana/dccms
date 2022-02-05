@@ -23,6 +23,8 @@ use App\Http\Controllers\Frontend\UserprofileController;
 use App\Http\Controllers\Frontend\ShowUserFeedbackController;
 use App\Http\Controllers\Frontend\ShowEtaskController;
 use App\Http\Controllers\Frontend\EmployeeRegistrationController;
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\ViewPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +88,8 @@ Route::get('employees/delete/{id}',[EmployeeController::class,'employeedelete'])
 Route::get('/user/list',[UserController::class,'userlist'])->name('admin.user');
 // Route::get('/admin/user/form',[UserController::class,'userform'])->name('user.form');
 // Route::post('/users/store',[UserController::class,'userstore'])->name('usertable.store');
+Route::get('/user/list/delete/{id}',[UserController::class,'userdelete'])->name('admin.user.list.delete');
+
 
 
 
@@ -196,3 +200,18 @@ Route::post('/employee/website/feedback',[ShowEtaskController::class,'doetaskfee
 // Employee Registration
 Route::get('/website/employee/registration',[EmployeeRegistrationController::class,'employeereg'])->name('website.employee.registration');
 Route::post('/website/employee/registration/store',[EmployeeRegistrationController::class,'doemployeeregistration'])->name('website.do.employee.registration');
+
+
+// About Us
+Route::get('/website/about',[AboutController::class,'aboutus'])->name('website.about');
+
+
+// Pictures
+Route::get('/website/view/problem/electricity',[ViewPageController::class,'electricity'])->name('website.view.electricity');
+Route::get('/website/view/problem/water',[ViewPageController::class,'water'])->name('website.view.water');
+Route::get('/website/view/problem/street',[ViewPageController::class,'street'])->name('website.view.street');
+Route::get('/website/view/problem/mosquito',[ViewPageController::class,'mosquito'])->name('website.view.mosquito');
+Route::get('/website/view/problem/waterlogging',[ViewPageController::class,'waterlogging'])->name('website.view.waterlogging');
+Route::get('/website/view/problem/garbage',[ViewPageController::class,'garbage'])->name('website.view.garbage');
+Route::get('/website/view/problem/gas',[ViewPageController::class,'gas'])->name('website.view.gas');
+Route::get('/website/view/problem/sewage',[ViewPageController::class,'sewage'])->name('website.view.sewage');

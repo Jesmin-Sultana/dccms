@@ -11,8 +11,8 @@ class EtaskController extends Controller
     public function etasklist(Request $request){
         $search = $request->query('search');
         if($search){
-            $etask = Etask::where('user_nid','Like', '%'.$search.'%')
-                ->orWhere('employee_nid','like','%'.$search.'%')->get();
+            $etask = Etask::where('employee_name','Like', '%'.$search.'%')
+                ->orWhere('nid_number','like','%'.$search.'%')->get();
             return view('admin.layouts.etask_list',compact('etask'));
         }
        
@@ -24,17 +24,17 @@ class EtaskController extends Controller
     }
     public function add(Request $request){
         // dd($request->all());
-        $request->validate([
-            'employee_nid'=>'required',
-            'employee_name'=>'required',
-            'user_nid'=>'required',
-            'user_name'=>'required',
-            'problem_area'=>'required',
-            'work_type'=>'required',
-            'feedback'=>'required',
-            'image'=>'required',
+        // $request->validate([
+        //     // 'employee_nid'=>'required',
+        //     'employee_name'=>'required',
+        //     'user_nid'=>'required',
+        //     'user_name'=>'required',
+        //     'problem_area'=>'required',
+        //     'work_type'=>'required',
+        //     'feedback'=>'required',
+        //     'image'=>'required',
 
-        ]);
+        // ]);
         if($request->hasFile('image')){
             $file = $request->file('image');
             $filename = (date('Ymdhms')).'.'.$file->getClientOriginalExtension();
@@ -46,8 +46,8 @@ class EtaskController extends Controller
         
 
         etask::create([
-            'employee_nid'=>$request->employee_nid,
             'employee_name'=>$request->employee_name,
+            'nid_number'=>$request->nid_number,
             'user_nid'=>$request->user_nid,
             'user_name'=>$request->user_name,
             'problem_area'=>$request->problem_area,

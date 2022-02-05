@@ -12,8 +12,8 @@ class UserfeedbackController extends Controller
 
         $search = $request->query('search');
         if($search){
-            $userfeedback = Userfeedback::where('user_name','Like', '%'.$search.'%')
-                ->orWhere('user_nid','like','%'.$search.'%')->get();
+            $userfeedback = Userfeedback::where('name','Like', '%'.$search.'%')
+                ->orWhere('nid_number','like','%'.$search.'%')->get();
             return view('admin.layouts.userfeedback_list',compact('userfeedback'));
         }
         $userfeedback = Userfeedback::all();
@@ -32,8 +32,8 @@ class UserfeedbackController extends Controller
             $file->storeAs('/uploads',$filename);
         }
         userfeedback::create([
-            'user_name'=>$request->user_name,
-            'user_nid'=>$request->user_nid,
+            'name'=>$request->name,
+            'nid_number'=>$request->nid_number,
             'problem_type'=>$request->problem_type,
             'area'=>$request->area,
             'feedback'=>$request->feedback,

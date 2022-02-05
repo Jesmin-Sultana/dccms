@@ -10,22 +10,27 @@ use Illuminate\Http\Request;
 class ReportController extends Controller
 {
     public function reportlist(Request $request){
-        // dd($request->all());
-    
 
-        
-            $from = $request->query('from_date');
-            $to = $request->query('to_date');
-            $problem = [];
-            if($from && $to){
-                // dd('ok');
+      $problem = [];
+      if($request->has('from_date'))
+      {
+        $request->validate([
+          'from_date' => 'required',
+          'to_date' => 'required|date|after_or_equal:from_date',
+      ]);
 
-              $problem = Problem::whereBetween('date',[$from,$to])->get();
-            //   dd($problem);
-              return view('admin.layouts.report_list',compact('problem'));
-            }
-            return view('admin.layouts.report_list',compact('problem'));
+      $from = $request->query('from_date');
+      $to = $request->query('to_date');
+
+     
+      if($from && $to){
+        $problem = Problem::whereBetween('date',[$from,$to])->get();
+        return view('admin.layouts.report_list',compact('problem'))->with('error','Please select a validate date');
+      }
+      return view('admin.layouts.report_list',compact('problem'))->with('error','Please select a validate date');
     }
+    return view('admin.layouts.report_list',compact('problem'));
+  }
 
 
 

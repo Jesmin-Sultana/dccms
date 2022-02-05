@@ -24,6 +24,15 @@ class ProblemshowController extends Controller
     }
 
     public function doshowproblem(Request $request){
+
+        $request->validate([
+            'area'=>'required',
+            'problem_type'=>'required',
+            'date'=>'required',
+             
+        
+        ]);
+
         //dd($request->all());
         problem::create([
             'nid_number'=>auth()->user()->nid_number,

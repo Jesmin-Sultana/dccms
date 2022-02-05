@@ -39,6 +39,8 @@
   <thead>
     <tr>
       <th scope="col">Employee Name</th>
+      <th scope="col">NID Number</th>
+
       <th scope="col">Problem Area</th>
       <th scope="col">Work Type</th>
       <th scope="col">Feedback</th>
@@ -52,6 +54,8 @@
       @foreach($etask as $data)
     <tr>
       <th scope="row">{{$data->employee->employee_name}}</th>
+      <td>{{$data->nid_number}}</td>
+
       <td>{{$data->problem_area}}</td>
       <td>{{$data->work_type}}</td>
       <td>{{$data->feedback}}</td>
@@ -59,12 +63,9 @@
       <td>
       <a class="btn btn-danger" href="{{route('admin.Employee.feedback.details',$data->id)}}">View</a>
 
-      </td>
-      <td>
-      <a class="btn btn-success" href="{{route('admin.etask.edit',$data->id)}}">Edit</a>
+      
+      <a  href="#"></a>
 
-      </td>
-      <td>
       <a class="btn btn-warning" href="{{route('admin.employee.feedback.delete',$data->id)}}">Delete</a>
 
       </td>

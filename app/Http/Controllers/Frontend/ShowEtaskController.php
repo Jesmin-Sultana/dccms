@@ -16,17 +16,17 @@ class ShowEtaskController extends Controller
 
     public function doetaskfeedback(Request $request){
         // dd($request->all());
-        // $request->validate([
+        $request->validate([
         //     'employee_nid'=>'required',
         //     'employee_name'=>'required',
         //     'user_nid'=>'required',
         //     'user_name'=>'required',
-        //     'problem_area'=>'required',
-        //     'work_type'=>'required',
-        //     'feedback'=>'required',
-        //     'image'=>'required',
+            'problem_area'=>'required',
+            'work_type'=>'required',
+            'feedback'=>'required',
+            'image'=>'required',
 
-        // ]);
+        ]);
         if($request->hasFile('image')){
             $file = $request->file('image');
             $filename = (date('Ymdhms')).'.'.$file->getClientOriginalExtension();
@@ -39,6 +39,9 @@ class ShowEtaskController extends Controller
 
        $etask = etask::create([
             'employee_name'=>$request->employee_name,
+            'nid_number'=>auth()->user()->nid_number,
+
+
             'problem_area'=>$request->problem_area,
             'work_type'=>$request->work_type,
             'feedback'=>$request->feedback,

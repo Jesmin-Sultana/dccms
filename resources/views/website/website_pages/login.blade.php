@@ -16,7 +16,7 @@
 <div class="card">
 <header class="card-header">
 	<!-- <a href="" class="float-right btn btn-outline-primary mt-1">Log In</a> -->
-	<h4 class="card-title mt-2">Enter Your Information</h4>
+	<center><h4 class="card-title mt-2">Enter Your Information</h4></center>
 </header>
 
 
@@ -25,10 +25,10 @@
 <form action="{{route('user.do.login')}}" method='post'>
 	@csrf
 
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<label>NID Number</label>
 		<input name="nid_number" type="number" class="form-control" placeholder="">
-	</div>
+	</div> -->
 	<!-- <div class="form-group">
 		<label>Name</label>
 		<input name="name" type="text" class="form-control" placeholder="">

@@ -5,7 +5,7 @@
 
         <div id="tooplate_menu">
             <ul style="display: flex; justify-content: space-between; padding-left: 57px;">
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="{{route('website.about')}}">About Us</a></li>
 
                 @if(auth()->user())
 
